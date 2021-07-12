@@ -6,6 +6,7 @@ This repository is a scaffold for headless CMS projects using Nuxt and Typo3. It
 * Nuxt Typo3 Module
 * GTM
 * Axios
+* ...
 
 ## Build Setup
 
