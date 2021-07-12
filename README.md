@@ -1,4 +1,11 @@
-# gbk-corporate-pwa
+# Nuxt Typo3 Starter Kit
+This repository is a scaffold for headless CMS projects using Nuxt and Typo3. It comes with a set of packages that are widely used across our projects, e.g.:
+
+* TailwindCSS
+* GSAP
+* Nuxt Typo3 Module
+* GTM
+* Axios
 
 ## Build Setup
 
