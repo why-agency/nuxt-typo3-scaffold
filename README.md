@@ -15,6 +15,9 @@ $ cp .env.example .env
 ```
 
 Specify the Typo3 endpoint in .env
+```
+TYPO3_API=https://api.cms.de
+```
 
 ```bash
 # install dependencies
