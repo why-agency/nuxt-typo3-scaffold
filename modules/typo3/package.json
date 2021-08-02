@@ -1,0 +1,61 @@
+{
+  "name": "nuxt-typo3",
+  "version": "0.9.3",
+  "description": "TYPO3 Frontend rendered in Vue.js and Nuxt (frontend for EXT:headless)",
+  "license": "MIT",
+  "author": "Macopedia",
+  "contributors": [
+    {
+      "name": "Adam Marcinkowski <a.marcinkowski@macopedia.pl>"
+    }
+  ],
+  "main": "lib/module.js",
+  "repository": "https://github.com/TYPO3-Initiatives/nuxt-typo3",
+  "bugs": {
+    "url": "https://github.com/TYPO3-Initiatives/nuxt-typo3/issues"
+  },
+  "homepage": "https://github.com/TYPO3-Initiatives/nuxt-typo3#readme",
+  "keywords": [
+    "typo3",
+    "headless",
+    "nuxt",
+    "vue"
+  ],
+  "scripts": {
+    "dev": "nuxt example",
+    "lint": "eslint --ignore-pattern '/lib/templates/plugins' --ext .js,.vue example lib test",
+    "lintfix": "eslint --fix --ext .js,.vue --ignore-pattern '/lib/templates/plugins' --ignore-path .gitignore .",
+    "test": "yarn lint && jest",
+    "commitlint": "commitlint --verbose",
+    "release": "yarn test && standard-version && git push --follow-tags && npm publish",
+    "prepare": "husky install"
+  },
+  "files": [
+    "lib"
+  ],
+  "types": "./lib/types.d.ts",
+  "dependencies": {
+    "@nuxtjs/axios": "^5.9.0",
+    "defu": "^2.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest",
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "@nuxtjs/eslint-config": "latest",
+    "@nuxtjs/module-test-utils": "latest",
+    "babel-eslint": "latest",
+    "babel-jest": "latest",
+    "eslint": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-loader": "latest",
+    "eslint-plugin-nuxt": "latest",
+    "eslint-plugin-prettier": "latest",
+    "husky": "latest",
+    "jest": "latest",
+    "nuxt-edge": "latest",
+    "nuxt-i18n": "latest",
+    "standard-version": "latest"
+  }
+}
