@@ -95,6 +95,18 @@ export default {
     defaultLocale: 'de'
   },
 
+  extendPlugins(plugins) {
+    const pluginIndex = plugins.findIndex(
+      ({ src }) => src?.includes('axios.js')
+    )
+    const shouldBeFirstPlugin = plugins[pluginIndex]
+
+    plugins.splice(pluginIndex, 1)
+    plugins.unshift(shouldBeFirstPlugin)
+
+    return plugins
+  },
+
     /**
    * Google Tag Manager
    * https://github.com/nuxt-community/gtm-module
