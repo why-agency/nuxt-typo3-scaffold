@@ -36,7 +36,7 @@
   "types": "./lib/types.d.ts",
   "dependencies": {
     "@nuxtjs/axios": "^5.9.0",
-    "defu": "^2.0.4"
+    "defu": "^5.0.0"
   },
   "devDependencies": {
     "@babel/core": "latest",
