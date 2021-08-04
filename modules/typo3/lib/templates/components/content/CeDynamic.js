@@ -44,9 +44,7 @@ export default {
       const componentName =
         typeNameCamelCase[0].toUpperCase() + typeNameCamelCase.slice(1)
 
-      if (this.$nuxt.$options.components[componentName]) {
-        elementTag = `ce-${this.type}`
-      } else {
+      if (!this.$nuxt.$options.components[componentName]) {
         elementTag = 'ce-default'
       }
 
