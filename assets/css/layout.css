@@ -1,0 +1,31 @@
+.space-before-small {
+  @apply mt-6 lg:mt-10;
+}
+
+.space-after-small {
+  @apply mb-6 lg:mb-10;
+}
+
+.space-before-default {
+  @apply mt-20 lg:mt-32;
+}
+
+.space-after-default {
+  @apply mb-20 lg:mb-32;
+}
+
+.frame-small {
+  @apply mx-6 xl:mx-auto xl:max-w-5xl xxl:max-w-7xl xxxl:max-w-[1440px];
+}
+
+.frame-medium {
+  @apply mx-6 xl:mx-auto xl:max-w-5xl xxl:max-w-7xl xxxl:max-w-[1440px] full:max-w-[1720px];
+}
+
+.frame-default {
+  @apply mx-6 xl:mx-auto xl:max-w-5xl xxl:max-w-7xl xxxl:max-w-[1440px] full:max-w-[1920px];
+}
+
+.frame-full {
+  @apply w-screen;
+}

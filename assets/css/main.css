@@ -1,3 +1,6 @@
+@import './layout.css';
+@import './fonts.css';
+
 body {
   font-size: 1rem;
 }
