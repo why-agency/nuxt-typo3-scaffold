@@ -15,15 +15,15 @@
 }
 
 .frame-small {
-  @apply mx-6 xl:mx-auto xl:max-w-5xl xxl:max-w-7xl xxxl:max-w-[1440px];
+  @apply mx-6 xl:mx-auto xl:max-w-5xl 2xl:max-w-7xl;
 }
 
 .frame-medium {
-  @apply mx-6 xl:mx-auto xl:max-w-5xl xxl:max-w-7xl xxxl:max-w-[1440px] full:max-w-[1720px];
+  @apply mx-6 xl:mx-auto xl:max-w-5xl 2xl:max-w-7xl;
 }
 
 .frame-default {
-  @apply mx-6 xl:mx-auto xl:max-w-5xl xxl:max-w-7xl xxxl:max-w-[1440px] full:max-w-[1920px];
+  @apply mx-6 xl:mx-auto xl:max-w-5xl 2xl:max-w-7xl;
 }
 
 .frame-full {

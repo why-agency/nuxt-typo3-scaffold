@@ -76,7 +76,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
-    '~/modules/nuxt-typo3',
+    // '@/modules/typo3',
     'nuxt-i18n',
     '@nuxtjs/gtm',
   ],
