@@ -1,4 +1,4 @@
-name: ci
+name: formatting
 
 on:
   push:
@@ -8,6 +8,7 @@ on:
   pull_request:
     branches:
       - main
+      - review
       - master
 
 jobs:
@@ -24,7 +25,7 @@ jobs:
         uses: actions/checkout@master
 
       - name: Setup node env 🏗
-        uses: actions/setup-node@v2.4.0
+        uses: actions/setup-node@v2.4.1
         with:
           node-version: ${{ matrix.node }}
           check-latest: true
@@ -48,3 +49,5 @@ jobs:
       - name: Run linter 👀
         run: yarn lint
 
+      - name: Check formatting
+        run: npx prettier --check .
