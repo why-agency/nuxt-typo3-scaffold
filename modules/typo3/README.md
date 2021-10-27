@@ -92,4 +92,3 @@ npm install nuxt-typo3
 [MIT License](./LICENSE)
 
 Copyright (c) MACOPEDIA
- 

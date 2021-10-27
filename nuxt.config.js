@@ -15,14 +15,12 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
   /**
-  * Environment variables
-  */
+   * Environment variables
+   */
   env: {
     cmsEndpoint: process.env.TYPO3_API
   },
@@ -38,8 +36,8 @@ export default {
   },
 
   /*
-  ** Customize the progress-bar color
-  */
+   ** Customize the progress-bar color
+   */
   loading: { color: '#009FE3' },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -55,7 +53,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     // '@/plugins/i18n',
-    '@/plugins/strip-html',
+    '@/plugins/strip-html'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -70,7 +68,7 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     // https://github.com/ivodolenc/nuxt-gsap-module#readme
-    'nuxt-gsap-module',
+    'nuxt-gsap-module'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -78,14 +76,14 @@ export default {
     '@nuxtjs/axios',
     // '@/modules/typo3',
     'nuxt-i18n',
-    '@nuxtjs/gtm',
+    '@nuxtjs/gtm'
   ],
 
-    /*
+  /*
    ** TYPO3 module configuration
    ** https://github.com/TYPO3-Initiatives/nuxt-typo3
    */
-   typo3: {
+  typo3: {
     baseURL: process.env.NUXT_HOST,
     api: {
       baseURL: process.env.TYPO3_API
@@ -96,8 +94,8 @@ export default {
   },
 
   extendPlugins(plugins) {
-    const pluginIndex = plugins.findIndex(
-      ({ src }) => src?.includes('axios.js')
+    const pluginIndex = plugins.findIndex(({ src }) =>
+      src?.includes('axios.js')
     )
     const shouldBeFirstPlugin = plugins[pluginIndex]
 
@@ -107,20 +105,20 @@ export default {
     return plugins
   },
 
-    /**
+  /**
    * Google Tag Manager
    * https://github.com/nuxt-community/gtm-module
    */
-     gtm: {
-      id: '', // Used as fallback if no runtime config is provided
-      debug: process.env.NODE_ENV === 'development'
-    },
+  gtm: {
+    id: '', // Used as fallback if no runtime config is provided
+    debug: process.env.NODE_ENV === 'development'
+  },
 
   /**
    * Nuxt i18n
    * https://i18n.nuxtjs.org/
    */
-   i18n: {
+  i18n: {
     locales: ['en', 'de'],
     defaultLocale: 'de',
     strategy: 'no_prefix',
@@ -134,7 +132,7 @@ export default {
       fallbackLocale: 'en',
       messages: {
         en,
-        de,
+        de
       }
     }
   },
@@ -143,7 +141,7 @@ export default {
    * GSAP configuration
    * https://github.com/ivodolenc/nuxt-gsap-module
    */
-   gsap: {
+  gsap: {
     extraPlugins: {
       cssRule: false,
       draggable: false,
@@ -168,6 +166,5 @@ export default {
   axios: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-  }
+  build: {}
 }
