@@ -14,4 +14,3 @@ export default async function (to) {
   }
   return { x: 0, y: 0 }
 }
-
