@@ -29,3 +29,7 @@
 .frame-full {
   @apply w-screen;
 }
+
+.frame-full-bg {
+  @apply w-screen relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw] py-16 lg:py-28;
+}
