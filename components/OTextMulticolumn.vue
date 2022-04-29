@@ -1,12 +1,8 @@
 <template>
-  <section :class="$_bgColor">
+  <section :class="[backgroundColor, $_outerFrame]">
     <div
       class="grid gap-y-8 lg:gap-y-4 gap-x-12"
-      :class="[
-        { 'frame-small': background !== 'none' },
-        $_layout,
-        $_textAlignment
-      ]"
+      :class="[$_innerFrame, $_layout, $_textAlignment]"
     >
       <div v-for="col in columns" :key="col.id">
         <BaseOverline
@@ -53,6 +49,7 @@
 
 <script>
 import { useBreakpoints } from '@vueuse/core'
+import { useBackgroundColor } from '@/composables/useBackgroundColor'
 export default {
   props: {
     background: {
@@ -78,12 +75,18 @@ export default {
     position: {
       type: String,
       default: 'left'
+    },
+    appearance: {
+      type: Object,
+      default: () => ({ frameClass: 'default' })
     }
   },
-  setup() {
+  setup(props) {
     const breakpoints = useBreakpoints({ xxl: 1440 })
     const isXxl = breakpoints.greater('xxl')
-    return { isXxl }
+
+    const backgroundColor = useBackgroundColor(props.background)
+    return { isXxl, backgroundColor }
   },
   computed: {
     has1Col() {
@@ -119,11 +122,17 @@ export default {
         'lg:max-w-[860px]': this.has1Col
       }
     },
-    $_bgColor() {
-      return {
-        'bg-primary text-white py-8 md:py-16': this.background === 'primary',
-        'bg-secondary text-white py-8 md:py-16': this.background === 'secondary'
-      }
+    $_outerFrame() {
+      return { 'frame-full-bg': this.backgroundColor }
+    },
+    $_innerFrame() {
+      const { frameClass } = this.appearance
+      return (
+        this.backgroundColor && {
+          'frame-default': frameClass === 'default',
+          'frame-small': frameClass === 'small'
+        }
+      )
     },
     $_textAlignment() {
       return this.has1Col
