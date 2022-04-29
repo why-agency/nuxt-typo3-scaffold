@@ -1,6 +1,8 @@
 import Vue from 'vue'
 
-const components = {}
+import OTextMulticolumn from '@/components/OTextMulticolumn'
+
+const components = { OTextMulticolumn }
 
 export default ({ app }) => {
   Object.keys(components).forEach(key => {
