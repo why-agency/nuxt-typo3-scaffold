@@ -52,8 +52,9 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    // '@/plugins/i18n',
-    '@/plugins/strip-html'
+    '@/plugins/i18n',
+    '@/plugins/strip-html',
+    '@/plugins/scroll-lock.client'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -68,16 +69,13 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     // https://github.com/ivodolenc/nuxt-gsap-module#readme
-    'nuxt-gsap-module'
+    'nuxt-gsap-module',
+    // https://composition-api.nuxtjs.org/getting-started/introduction
+    '@nuxtjs/composition-api/module'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    '@nuxtjs/axios',
-    // '@/modules/typo3',
-    'nuxt-i18n',
-    '@nuxtjs/gtm'
-  ],
+  modules: ['@nuxtjs/axios', '@/modules/typo3', 'nuxt-i18n', '@nuxtjs/gtm'],
 
   /*
    ** TYPO3 module configuration
@@ -122,13 +120,9 @@ export default {
     locales: ['en', 'de'],
     defaultLocale: 'de',
     strategy: 'no_prefix',
+    detectBrowserLanguage: false,
     vueI18n: {
       dateTimeFormats,
-      detectBrowserLanguage: {
-        useCookie: true,
-        cookieKey: 'i18n_redirected',
-        onlyOnRoot: true
-      },
       fallbackLocale: 'en',
       messages: {
         en,
@@ -155,7 +149,11 @@ export default {
     extraEases: {
       expoScaleEase: false,
       roughEase: false,
-      slowMo: false
+      slowMo: false,
+      customEase: true
+    },
+    clubPlugins: {
+      splitText: true
     }
   },
 
