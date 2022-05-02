@@ -128,5 +128,6 @@ module.exports = {
         hover: 'cubic-bezier(0.88, 0.00, 0.35, 0.99)'
       }
     }
-  }
+  },
+  plugins: [require('@tailwindcss/aspect-ratio')]
 }
