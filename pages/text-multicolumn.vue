@@ -3,7 +3,7 @@
     <section class="frame-default space-after-default">
       <OTextMulticolumn v-bind="data1" />
     </section>
-    <section class="frame-default space-after-default">
+    <section class="frame-small space-after-default">
       <OTextMulticolumn v-bind="data2" />
     </section>
     <section class="frame-default space-after-default">
@@ -17,6 +17,9 @@ export default {
   data() {
     return {
       data1: {
+        appearance: {
+          frameClass: 'default'
+        },
         variant: '1col',
         background: 'primary',
         column1: {
@@ -111,6 +114,9 @@ export default {
         }
       },
       data2: {
+        appearance: {
+          frameClass: 'small'
+        },
         variant: '3col',
         background: 'none',
         column1: {
@@ -253,6 +259,9 @@ export default {
         }
       },
       data3: {
+        appearance: {
+          frameClass: 'default'
+        },
         variant: '2col',
         background: 'none',
         column1: {
