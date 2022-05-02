@@ -44,7 +44,7 @@ export default {
           }`
         ]
       },
-     ctx.children
+      ctx.children
     )
     return ctx.props.background === 'none' || !ctx.props.background ? frame : createElement('div', { class: ctx.props.background }, [frame])
   }

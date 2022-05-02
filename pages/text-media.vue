@@ -1,16 +1,14 @@
 <template>
   <div>
-    <section class="bg-primary py-20 lg:pt-40 lg:pb-20 space-after-default">
-      <div class="frame-default">
-        <OTextMedia v-bind="dataImage" />
-      </div>
-    </section>
-    <section class="frame-default space-after-default">
+    <CeFrame v-bind="dataImage.appearance">
+      <OTextMedia v-bind="dataImage" />
+    </CeFrame>
+    <CeFrame>
       <OTextMedia v-bind="dataUploadVideo" />
-    </section>
-    <section class="frame-default space-after-default">
+    </CeFrame>
+    <CeFrame>
       <OTextMedia v-bind="dataStreamVideo" />
-    </section>
+    </CeFrame>
     <portal-target name="video-lightbox"></portal-target>
   </div>
 </template>
@@ -21,6 +19,7 @@ export default {
     return {
       dataImage: {
         appearance: {
+          frameClass: 'default',
           background: 'bg-primary'
         },
         header: {
