@@ -20,7 +20,6 @@
 import { computed, ref } from '@nuxtjs/composition-api'
 import { useBackgroundColor } from '@/composables/useBackgroundColor'
 
-
 const props = defineProps({
   actions: {
     type: Array,
@@ -66,7 +65,4 @@ const contentFrame = computed(() =>
 const backgroundColor = computed(() => useBackgroundColor(props.background))
 const theme = computed(() => ({ dark: props.background === 'primary' }))
 const frame = computed(() => ({ 'frame-full-bg': props.background !== 'none' }))
-
-
-
 </script>
