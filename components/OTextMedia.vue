@@ -307,7 +307,7 @@ export default {
           duration: 0.6
         })
         tl.from(
-          headline,
+          headline?.$el,
           { opacity: 0, autoAlpha: 0, x: offsetText, duration: 0.6 },
           '<'
         )
@@ -319,7 +319,7 @@ export default {
         })
       } else {
         this.$gsap.utils
-          .toArray([imageCol, headline, text])
+          .toArray([imageCol, headline?.$el, text])
           .forEach(element => {
             tl.from(element, {
               opacity: 0,
