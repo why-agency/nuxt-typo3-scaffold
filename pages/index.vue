@@ -88,6 +88,11 @@
         Text Multicolumn
       </BaseAction>
     </div>
+    <div>
+      <BaseAction variant="text" to="/text-accordion">
+        Text Accordion
+      </BaseAction>
+    </div>
   </div>
 </template>
 
