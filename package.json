@@ -23,7 +23,7 @@
     "@nuxtjs/gtm": "2.4.0",
     "@vueuse/core": "^8.3.1",
     "core-js": "3.19.0",
-    "gsap": "npm:@gsap/business",
+    "gsap": "./gsap-bonus.tgz",
     "nuxt": "2.15.8",
     "nuxt-i18n": "6.28.1",
     "sass": "^1.51.0",

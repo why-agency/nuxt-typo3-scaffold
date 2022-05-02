@@ -52,6 +52,7 @@ typings/
 
 # Output of 'npm pack'
 *.tgz
+!gsap-bonus.tgz
 
 # Yarn Integrity file
 .yarn-integrity
