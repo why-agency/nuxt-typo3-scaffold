@@ -81,6 +81,13 @@
     <BaseReveal class="mt-20" :delay="5">
       <MActionBar class="mt-10" :actions="actions" />
     </BaseReveal>
+
+    <div class="my-10">
+      <BaseHeadline :layout="3" text="Components" />
+      <BaseAction variant="text" to="/text-multicolumn">
+        Text Multicolumn
+      </BaseAction>
+    </div>
   </div>
 </template>
 
