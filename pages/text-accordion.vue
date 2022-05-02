@@ -11,7 +11,7 @@ export default {
   data() {
     return {
       data1: {
-          appearance: {
+        appearance: {
           frameClass: 'default'
         },
         background: 'primary',
@@ -86,7 +86,7 @@ export default {
                       class: ''
                     },
                     variant: 'text',
-                    color: 'primary'
+                    color: 'secondary'
                   }
                 }
               ]
