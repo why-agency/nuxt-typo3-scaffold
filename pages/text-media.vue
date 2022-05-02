@@ -28,14 +28,12 @@ export default {
           layout: 3
         },
         variant: 'image',
-        position: 'media-left',
-        animation: 'yes',
-        background: 'none',
+        position: 'media-right',
+        animation: 'no',
         bodytext: {
-          text: 'Die DELTA Gruppe unterstützt bei der Durchführung von Planungs- und Bauprozessen aller Art und orientiert sich hierbei im besonderen Maße an individuellen Bedürfnissen der Kunden.',
+          text: 'Risus quis varius quam quisque id diam vel quam elementum. Urna condimentum mattis pellentesque id. Elementum nisi quis eleifend quam adipiscing. Scelerisque purus semper eget duis at. Velit dignissim sodales ut eu. Lectus mauris ultrices eros in cursus turpis massa tincidunt. Tincidunt vitae semper quis lectus nulla at volutpat diam. Ridiculus mus mauris vitae ultricies leo integer malesuada nunc. Gravida rutrum quisque non tellus orci. Turpis massa tincidunt dui ut ornare lectus sit amet. Natoque penatibus et magnis dis parturient montes. Suspendisse sed nisi lacus sed viverra tellus. Augue eget arcu dictum varius duis at. Est lorem ipsum dolor sit amet consectetur adipiscing. Cras semper auctor neque vitae tempus quam pellentesque nec. Nulla aliquet enim tortor at auctor urna nunc id. Maecenas pharetra convallis posuere morbi. Nunc id cursus metus aliquam. Neque aliquam vestibulum morbi blandit cursus risus at ultrices. Suspendisse potenti nullam ac tortor.',
           layout: 1
         },
-        metaHeadline: 'Bauplanung',
         actions: [
           {
             id: 9,
@@ -50,8 +48,8 @@ export default {
                 title: '',
                 class: ''
               },
-              variant: 'filled',
-              color: 'primary',
+              variant: 'outline',
+              color: 'white',
               icon: {
                 name: 'ArrowUpRight',
                 position: ''
@@ -114,17 +112,15 @@ export default {
       dataUploadVideo: {
         header: {
           text: 'Wenn wir planen, planen wir nachhaltig und vorausdenkend.',
-          layout: 3
+          layout: 2
         },
         variant: 'video-upload',
         position: 'media-right',
-        animation: 'none',
-        background: 'primary',
+        animation: 'yes',
         bodytext: {
-          text: 'Um ein Bauprojekt erfolgreich umzusetzen, bedarf es einer fundierten Planung und Vorgehensweise durch erfahrene Architekten und Bauingenieure.&nbsp;Sie koordinieren alle am Bau beteiligten Fachplaner.',
-          layout: 1
+          text: 'Risus quis varius quam quisque id diam vel quam elementum. Elementum nisi quis eleifend quam adipiscing. Scelerisque purus semper eget duis at. Velit dignissim sodales ut eu. Lectus mauris ultrices eros in cursus turpis massa tincidunt. Tincidunt vitae semper quis lectus nulla at volutpat diam. Ridiculus mus mauris vitae ultricies leo integer malesuada nunc. Gravida rutrum quisque non tellus orci. Turpis massa tincidunt dui ut ornare lectus sit amet. Natoque penatibus et magnis dis parturient montes. Suspendisse sed nisi lacus sed viverra tellus. Augue eget arcu dictum varius duis at. Est lorem ipsum dolor sit amet consectetur adipiscing. Cras semper auctor neque vitae tempus quam pellentesque nec. Nulla aliquet enim tortor at auctor urna nunc id. Maecenas pharetra convallis posuere morbi. Nunc id cursus metus aliquam. Neque aliquam vestibulum morbi blandit cursus risus at ultrices. Suspendisse potenti nullam ac tortor.',
+          layout: 2
         },
-        metaHeadline: '',
         actions: [
           {
             id: 14,
@@ -223,13 +219,11 @@ export default {
         },
         variant: 'video-stream',
         position: 'media-right',
-        animation: 'no',
-        background: 'primary',
+        animation: 'yes',
         bodytext: {
           text: 'This is a text for testing the module',
           layout: 1
         },
-        metaHeadline: '',
         actions: [],
         previewImage: [
           [
@@ -291,7 +285,7 @@ export default {
               title: 'This is the video title',
               start: null,
               end: null,
-              id: 'https://www.youtube.com/watch?v=sY1S34973zA'
+              id: 'Wvv0dqZ_xa4'
             }
           }
         ]
