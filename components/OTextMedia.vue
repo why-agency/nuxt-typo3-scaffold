@@ -1,5 +1,5 @@
 <template>
-  <section ref="wrapper" class="lg:pb-20">
+  <section ref="wrapper">
     <div
       class="grid lg:justify-center lg:gap-x-10 2xl:gap-x-0"
       :class="[$_gridStyle, $_theme]"

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="bg-primary py-20 lg:pt-40 lg:pb-20 space-after-default">
+    <section class="bg-primary py-20 lg:py-40 space-after-default">
       <div class="frame-default">
         <OTextMedia v-bind="dataImage" />
       </div>
