@@ -7,9 +7,8 @@
       <div
         class="mb-14 lg:mb-0 lg:relative"
         :class="{
-          'row-start-3 lg:row-start-1 lg:col-start-3 mt-16 lg:mt-0':
-            isMediumRight,
-          'lg:col-start-2': isMediumRight && !metaHeadline
+          'row-start-3 lg:row-start-1 lg:col-start-2 mt-16 lg:mt-0':
+            isMediumRight
         }"
       >
         <div
@@ -39,8 +38,9 @@
       <div
         class="lg:row-start-1 lg:col-start-2 lg:relative"
         :class="[
-          isMediumRight ? 'row-start-2 2xl:ml-20' : 'row-start-3 2xl:mr-20',
-          { 'lg:col-start-1': isMediumRight && !metaHeadline }
+          isMediumRight
+            ? 'lg:col-start-1 row-start-2 2xl:ml-20'
+            : 'row-start-3 2xl:mr-20'
         ]"
       >
         <div
@@ -122,10 +122,6 @@ export default {
     header: {
       type: Object,
       default: undefined
-    },
-    metaHeadline: {
-      type: String,
-      default: ''
     },
     bodytext: {
       type: Object,
@@ -235,14 +231,9 @@ export default {
       return this.videoStream[0].content
     },
     $_gridStyle() {
-      if (!this.metaHeadline) {
-        return this.isMediumRight
-          ? 'lg:grid-cols-[minmax(400px,580px),minmax(460px,780px)]'
-          : 'lg:grid-cols-[minmax(460px,780px),minmax(400px,580px)]'
-      }
       return this.isMediumRight
-        ? 'lg:grid-cols-[minmax(60px,80px),minmax(400px,580px),minmax(460px,780px)]'
-        : 'lg:grid-cols-[minmax(460px,780px),minmax(400px,580px),minmax(60px,80px)]'
+        ? 'lg:grid-cols-[minmax(400px,580px),minmax(460px,780px)]'
+        : 'lg:grid-cols-[minmax(460px,780px),minmax(400px,580px)]'
     },
     $_theme() {
       return {
