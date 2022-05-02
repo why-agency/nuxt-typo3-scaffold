@@ -1,6 +1,18 @@
 <template>
   <div class="m-12 space-y-8">
     <BaseLogo class="my-20" />
+    <div class="mt-10 mb-20 pb-10 border-b-2 border-primary">
+      <BaseHeadline :layout="1" text="Components" />
+      <div class="flex flex-col">
+        <BaseAction variant="text" to="/text-multicolumn">
+          Text Multicolumn
+        </BaseAction>
+        <BaseAction variant="text" to="/text-accordion">
+          Text Accordion
+        </BaseAction>
+        <BaseAction variant="text" to="/text-media">Text Media</BaseAction>
+      </div>
+    </div>
     <div>
       <BaseAction to="/" variant="outline" color="primary">
         <template #iconSuffix>
@@ -81,18 +93,6 @@
     <BaseReveal class="mt-20" :delay="5">
       <MActionBar class="mt-10" :actions="actions" />
     </BaseReveal>
-
-    <div class="my-10">
-      <BaseHeadline :layout="3" text="Components" />
-      <BaseAction variant="text" to="/text-multicolumn">
-        Text Multicolumn
-      </BaseAction>
-    </div>
-    <div>
-      <BaseAction variant="text" to="/text-accordion">
-        Text Accordion
-      </BaseAction>
-    </div>
   </div>
 </template>
 
