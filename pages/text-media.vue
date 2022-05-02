@@ -1,7 +1,9 @@
 <template>
   <div>
-    <section class="frame-default space-after-default">
-      <OTextMedia v-bind="dataImage" />
+    <section class="bg-primary py-20 lg:pt-40 lg:pb-20 space-after-default">
+      <div class="frame-default">
+        <OTextMedia v-bind="dataImage" />
+      </div>
     </section>
     <section class="frame-default space-after-default">
       <OTextMedia v-bind="dataUploadVideo" />
@@ -19,7 +21,7 @@ export default {
     return {
       dataImage: {
         appearance: {
-          frameClass: 'default'
+          background: 'bg-primary'
         },
         header: {
           text: 'Bauprojektmanagement',
@@ -110,9 +112,6 @@ export default {
         ]
       },
       dataUploadVideo: {
-        appearance: {
-          frameClass: 'default'
-        },
         header: {
           text: 'Wenn wir planen, planen wir nachhaltig und vorausdenkend.',
           layout: 3
@@ -218,9 +217,6 @@ export default {
         ]
       },
       dataStreamVideo: {
-        appearance: {
-          frameClass: 'default'
-        },
         header: {
           text: 'stream video headline',
           layout: 1

@@ -1,12 +1,8 @@
 <template>
-  <section
-    ref="wrapper"
-    class="mx-0 lg:pb-20"
-    :class="[backgroundColor, $_outerFrame]"
-  >
+  <section ref="wrapper" class="lg:pb-20">
     <div
       class="grid lg:justify-center lg:gap-x-10 2xl:gap-x-0"
-      :class="[$_gridStyle, $_theme, $_innerFrame]"
+      :class="[$_gridStyle, $_theme]"
     >
       <div
         class="mb-14 lg:mb-0 lg:relative"
@@ -97,7 +93,6 @@ import {
   breakpointsTailwind,
   useIntersectionObserver
 } from '@vueuse/core'
-import { useBackgroundColor } from '@/composables/useBackgroundColor'
 export default {
   props: {
     variant: {
@@ -148,21 +143,12 @@ export default {
       type: String,
       default: 'yes'
     },
-    background: {
-      type: String,
-      default: 'none'
-    },
     appearance: {
       type: Object,
-      default: () => ({ frameClass: 'default' })
-    },
-    fullbackground: {
-      type: String,
-      default: 'yes'
+      default: () => ({ background: 'none' })
     }
   },
   setup(props) {
-    const backgroundColor = useBackgroundColor(props.background)
     const breakpoints = useBreakpoints(breakpointsTailwind)
     const isLg = breakpoints.greater('lg')
     const textCol = ref(null)
@@ -188,8 +174,7 @@ export default {
       imageCol,
       imageHeight,
       wrapper,
-      isVisible,
-      backgroundColor
+      isVisible
     }
   },
   data() {
@@ -259,28 +244,10 @@ export default {
         ? 'lg:grid-cols-[minmax(60px,80px),minmax(400px,580px),minmax(460px,780px)]'
         : 'lg:grid-cols-[minmax(460px,780px),minmax(400px,580px),minmax(60px,80px)]'
     },
-    $_frameWithBg() {
-      return {
-        'frame-default py-12 lg:pt-32 lg:pb-12 lg:items-center':
-          this.background !== 'none'
-      }
-    },
     $_theme() {
       return {
-        dark: this.background === 'primary'
+        dark: this.appearance.background === 'bg-primary'
       }
-    },
-    $_outerFrame() {
-      return { 'frame-full-bg': this.backgroundColor }
-    },
-    $_innerFrame() {
-      const { frameClass } = this.appearance
-      return (
-        this.backgroundColor && {
-          'frame-default': frameClass === 'default',
-          'frame-small': frameClass === 'small'
-        }
-      )
     },
     isImageHigher() {
       return this.imageHeight > this.textHeight
@@ -292,7 +259,7 @@ export default {
       return this.isImageHigher ? this.$refs.textCol : this.$refs.imageCol
     },
     hasAnimation() {
-      return this.animation === 'yes' && this.background === 'none'
+      return this.animation === 'yes'
     }
   },
   watch: {
@@ -319,8 +286,6 @@ export default {
   },
   mounted() {
     this.setParentOverflow()
-    if (!this.hasAnimation) return
-    this.initScrollAnimation()
   },
   methods: {
     openVideoPortal() {
@@ -416,10 +381,7 @@ export default {
     setParentOverflow() {
       const wrapper = this.$refs?.wrapper
       const frame = wrapper?.parentElement
-      if (frame && this.fullbackground !== 'yes') {
-        console.log(this.fullbackground)
-        frame.classList.add('lg:overflow-y-hidden')
-      }
+      frame.classList.add('lg:overflow-y-hidden')
     }
   }
 }
