@@ -1,6 +1,6 @@
 <template>
-  <section :class="[frame, theme, backgroundColor]">
-    <div class="dark:text-white" :class="backgroundColor && contentFrame">
+  <section :class="theme">
+    <div class="dark:text-white">
       <BaseHeadline v-if="header.text" v-bind="header" class="mb-6 lg:mb-12" />
       <MActionBar v-if="actions" :actions="actions" position="left" />
       <ul class="flex flex-col mt-6 lg:mt-24">
@@ -18,16 +18,11 @@
 
 <script setup>
 import { computed, ref } from '@nuxtjs/composition-api'
-import { useBackgroundColor } from '@/composables/useBackgroundColor'
 
 const props = defineProps({
   actions: {
     type: Array,
     default: null
-  },
-  background: {
-    type: String,
-    default: 'none'
   },
   header: {
     type: Object,
@@ -36,6 +31,10 @@ const props = defineProps({
   tabs: {
     type: Array,
     required: true
+  },
+  appearance: {
+    type: Object,
+    default: () => ({ background: 'none' })
   }
 })
 /** format tabs */
@@ -57,12 +56,9 @@ const toggleActiveTab = ({ id }) => {
     isActive.value = isActive.value === id ? null : id
   }
 }
-/** set content width */
-const contentFrame = computed(() =>
-  props.appearance?.frameClass === 'default' ? 'frame-default' : 'frame-small'
-)
+
 /** set frame, background, theme */
-const backgroundColor = computed(() => useBackgroundColor(props.background))
-const theme = computed(() => ({ dark: props.background === 'primary' }))
-const frame = computed(() => ({ 'frame-full-bg': props.background !== 'none' }))
+const theme = computed(() => ({
+  dark: props.appearance?.background === 'bg-primary'
+}))
 </script>
