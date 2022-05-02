@@ -22,10 +22,14 @@ export default {
       type: String,
       required: false,
       default: 'default'
+    },
+    background: {
+      type: String,
+      default: 'none'
     }
   },
   render(createElement, ctx) {
-    return createElement(
+    const frame = createElement(
       'div',
       {
         class: [
@@ -40,7 +44,8 @@ export default {
           }`
         ]
       },
-      ctx.children
+     ctx.children
     )
+    return ctx.props.background === 'none' || !ctx.props.background ? frame : createElement('div', { class: ctx.props.background }, [frame])
   }
 }
