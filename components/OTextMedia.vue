@@ -1,5 +1,9 @@
 <template>
-  <section ref="wrapper" class="mx-0 lg:pb-20" :class="[backgroundColor, $_outerFrame]">
+  <section
+    ref="wrapper"
+    class="mx-0 lg:pb-20"
+    :class="[backgroundColor, $_outerFrame]"
+  >
     <div
       class="grid lg:justify-center lg:gap-x-10 2xl:gap-x-0"
       :class="[$_gridStyle, $_theme, $_innerFrame]"
@@ -9,7 +13,7 @@
         :class="{
           'row-start-3 lg:row-start-1 lg:col-start-3 mt-16 lg:mt-0':
             isMediumRight,
-          'lg:col-start-2': isMediumRight && !metaHeadline,
+          'lg:col-start-2': isMediumRight && !metaHeadline
         }"
       >
         <div
