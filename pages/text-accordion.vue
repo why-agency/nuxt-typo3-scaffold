@@ -1,7 +1,9 @@
 <template>
   <div>
-    <section class="frame-default">
-      <OTextAccordion v-bind="data1" />
+    <section class="bg-primary py-20 lg:py-40">
+      <div class="frame-default">
+        <OTextAccordion v-bind="data1" />
+      </div>
     </section>
   </div>
 </template>
@@ -12,7 +14,7 @@ export default {
     return {
       data1: {
         appearance: {
-          frameClass: 'default'
+          background: 'bg-primary'
         },
         background: 'primary',
         header: {
