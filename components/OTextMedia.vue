@@ -1,15 +1,15 @@
 <template>
-  <section ref="wrapper" class="lg:pb-20" :class="backgroundColor">
+  <section ref="wrapper" class="mx-0 lg:pb-20" :class="[backgroundColor, $_outerFrame]">
     <div
       class="grid lg:justify-center lg:gap-x-10 2xl:gap-x-0"
-      :class="[$_gridStyle, $_frameWithBg, $_theme]"
+      :class="[$_gridStyle, $_theme, $_innerFrame]"
     >
       <div
         class="mb-14 lg:mb-0 lg:relative"
         :class="{
           'row-start-3 lg:row-start-1 lg:col-start-3 mt-16 lg:mt-0':
             isMediumRight,
-          'lg:col-start-2': isMediumRight && !metaHeadline
+          'lg:col-start-2': isMediumRight && !metaHeadline,
         }"
       >
         <div
@@ -147,6 +147,14 @@ export default {
     background: {
       type: String,
       default: 'none'
+    },
+    appearance: {
+      type: Object,
+      default: () => ({ frameClass: 'default' })
+    },
+    fullbackground: {
+      type: String,
+      default: 'yes'
     }
   },
   setup(props) {
@@ -258,6 +266,18 @@ export default {
         dark: this.background === 'primary'
       }
     },
+    $_outerFrame() {
+      return { 'frame-full-bg': this.backgroundColor }
+    },
+    $_innerFrame() {
+      const { frameClass } = this.appearance
+      return (
+        this.backgroundColor && {
+          'frame-default': frameClass === 'default',
+          'frame-small': frameClass === 'small'
+        }
+      )
+    },
     isImageHigher() {
       return this.imageHeight > this.textHeight
     },
@@ -295,6 +315,8 @@ export default {
   },
   mounted() {
     this.setParentOverflow()
+    if (!this.hasAnimation) return
+    this.initScrollAnimation()
   },
   methods: {
     openVideoPortal() {
@@ -307,7 +329,7 @@ export default {
       const tl = this.$gsap.timeline()
       const offsetImage = this.isMediumRight ? 30 : -30
       const offsetText = this.isMediumRight ? -30 : 30
-      const { imageCol, headline, text, overlineCol } = this.$refs
+      const { imageCol, headline, text } = this.$refs
       if (this.isLg) {
         tl.from(imageCol, {
           opacity: 0,
@@ -326,16 +348,9 @@ export default {
           x: offsetText,
           duration: 0.6
         })
-        if (overlineCol) {
-          tl.from(
-            overlineCol,
-            { opacity: 0, autoAlpha: 0, x: offsetImage, duration: 0.6 },
-            '<'
-          )
-        }
       } else {
         this.$gsap.utils
-          .toArray([imageCol, overlineCol, headline, text])
+          .toArray([imageCol, headline, text])
           .forEach(element => {
             tl.from(element, {
               opacity: 0,
@@ -352,7 +367,7 @@ export default {
         $gsap,
         columnScrolling,
         columnFixed,
-        $refs: { wrapper, overlineCol },
+        $refs: { wrapper },
         id
       } = this
       if (!this.$ScrollTrigger) {
@@ -363,7 +378,7 @@ export default {
           const offset = columnScrolling.clientHeight - columnFixed.clientHeight
           // pull the longer colum up by offset (difference between columns' height) to vertically align the bottom of both columns
           $gsap.fromTo(
-            [columnScrolling, overlineCol],
+            columnScrolling,
             { y: 0 },
             {
               y: -offset,
@@ -397,7 +412,8 @@ export default {
     setParentOverflow() {
       const wrapper = this.$refs?.wrapper
       const frame = wrapper?.parentElement
-      if (frame) {
+      if (frame && this.fullbackground !== 'yes') {
+        console.log(this.fullbackground)
         frame.classList.add('lg:overflow-y-hidden')
       }
     }
