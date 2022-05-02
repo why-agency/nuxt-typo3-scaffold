@@ -90,9 +90,9 @@ import { ref } from '@nuxtjs/composition-api'
 import {
   useBreakpoints,
   useElementSize,
-  breakpointsTailwind,
-  useIntersectionObserver
+  breakpointsTailwind
 } from '@vueuse/core'
+import { useIntersectionObserver } from '@/composables/useIntersectionObserver'
 export default {
   props: {
     variant: {
@@ -152,17 +152,10 @@ export default {
     const { height: textHeight } = useElementSize(textCol)
     const { height: imageHeight } = useElementSize(imageCol)
     const wrapper = ref(null)
-    const isVisible = ref(false)
-    const { stop } = useIntersectionObserver(
-      wrapper,
-      ([{ isIntersecting }], observerElement) => {
-        if (isIntersecting) {
-          stop()
-        }
-        isVisible.value = isIntersecting
-      },
-      { threshold: 0.25 }
-    )
+    const isVisible = useIntersectionObserver({
+      target: wrapper,
+      threshold: 0.25
+    })
     return {
       isLg,
       textCol,
