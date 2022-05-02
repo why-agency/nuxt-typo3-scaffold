@@ -149,7 +149,7 @@ export default {
       motionPath: false,
       pixi: false,
       text: false,
-      scrollTo: false,
+      scrollTo: true,
       scrollTrigger: true
     },
     extraEases: {
