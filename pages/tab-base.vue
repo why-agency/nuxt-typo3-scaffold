@@ -1,8 +1,11 @@
 <template>
   <div>
-    <section>
+    <CeFrame>
       <OTabBase v-bind="data1" />
-    </section>
+    </CeFrame>
+    <CeFrame>
+      <OTabBase v-bind="data2" />
+    </CeFrame>
   </div>
 </template>
 
@@ -13,7 +16,7 @@ export default {
       data1: {
         variant: 'images',
         header: {
-          text: 'This is the main headline',
+          text: 'Tab module: text and image',
           layout: 2,
           position: 'left'
         },
@@ -118,12 +121,12 @@ export default {
                   },
                   cdn: {
                     publicUrl:
-                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_cultColl_01_02_ergebnis.webp',
+                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_partFrnd_hofmannVratny_img.jpg',
                     publicPath:
                       '/fileadmin/user_upload/01__why_agency_op_cultColl_01_02_ergebnis.webp'
                   },
                   useCase: 'default',
-                  ratio: '3:4'
+                  ratio: '5:3'
                 },
                 {
                   publicUrl:
@@ -176,7 +179,7 @@ export default {
                   },
                   cdn: {
                     publicUrl:
-                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_cultColl_01_02_ergebnis.webp',
+                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_partFrnd_hofmannVratny_img.jpg',
                     publicPath:
                       'fileadmin/user_upload/01__why_agency_op_cultColl_01_02_ergebnis.webp'
                   },
@@ -224,7 +227,7 @@ export default {
                   }
                 }
               ],
-              title: 'Altersvorsorge und Vergünstigungen',
+              title: 'Lorem ipsum dolor sit amet',
               decor: 'none'
             }
           },
@@ -298,7 +301,7 @@ export default {
                       '/user_upload/01__why_agency_op_partFrnd_hofmannVratny_img.jpg'
                   },
                   useCase: 'default',
-                  ratio: '3:4'
+                  ratio: '5:3'
                 },
                 {
                   publicUrl:
@@ -379,7 +382,7 @@ export default {
                   }
                 }
               ],
-              title: 'Planenplanenplanen&shy;planenplanenplane',
+              title: 'Ornare arcu',
               decor: 'circle'
             }
           },
@@ -448,12 +451,12 @@ export default {
                   },
                   cdn: {
                     publicUrl:
-                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/and_why_agency_case_study_humana_vr_ergebnis.webp',
+                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_partFrnd_hofmannVratny_img.jpg',
                     publicPath:
                       '/user_upload/and_why_agency_case_study_humana_vr_ergebnis.webp'
                   },
                   useCase: 'default',
-                  ratio: '3:4'
+                  ratio: '5:3'
                 },
                 {
                   publicUrl:
@@ -507,7 +510,7 @@ export default {
                   },
                   cdn: {
                     publicUrl:
-                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/and_why_agency_case_study_humana_vr_ergebnis.webp',
+                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_partFrnd_hofmannVratny_img.jpg',
                     publicPath:
                       '/user_upload/and_why_agency_case_study_humana_vr_ergebnis.webp'
                   },
@@ -556,6 +559,199 @@ export default {
                 }
               ],
               title: 'Dies ist ein dritter tab',
+              decor: 'none'
+            }
+          }
+        ]
+      },
+      data2: {
+        variant: 'text',
+        header: {
+          text: 'Tab module: text',
+          layout: 2,
+          position: 'left'
+        },
+        actions: [
+          {
+            id: 190,
+            pid: 18,
+            type: 'a_01_01__action',
+            content: {
+              text: 'Leistungen',
+              link: {
+                type: 'url',
+                url: 'https://www.youtube.com/watch?v=ScMzIvxBSi4',
+                target: '',
+                title: '',
+                class: ''
+              },
+              variant: 'filled',
+              color: 'primary'
+            }
+          },
+          {
+            id: 191,
+            pid: 18,
+            type: 'a_01_01__action',
+            content: {
+              text: 'Leistungen',
+              link: {
+                type: 'url',
+                url: 'https://www.youtube.com/watch?v=ScMzIvxBSi4',
+                target: '',
+                title: '',
+                class: ''
+              },
+              variant: 'outline',
+              color: 'primary'
+            }
+          }
+        ],
+        tabs: [
+          {
+            id: 52,
+            pid: 18,
+            type: 'text-tab-images',
+            content: {
+              header: {
+                text: 'This is the second headline',
+                layout: 6,
+                position: 'left'
+              },
+              bodytext:
+                'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</strong></p> <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p> <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p> <p>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat.',
+              actions: [
+                {
+                  id: 78,
+                  pid: 18,
+                  type: 'a_01_01__action',
+                  content: {
+                    text: 'Downloads &amp; Links',
+                    link: {
+                      type: 'page',
+                      url: '/downloads-links',
+                      target: '',
+                      title: '',
+                      class: ''
+                    },
+                    variant: 'text',
+                    color: 'primary',
+                    icon: {
+                      name: 'ArrowUpRight',
+                      position: 'trailing'
+                    }
+                  }
+                },
+                {
+                  id: 79,
+                  pid: 18,
+                  type: 'a_01_01__action',
+                  content: {
+                    text: 'API/Testing',
+                    link: {
+                      type: 'page',
+                      url: '/api',
+                      target: '',
+                      title: '',
+                      class: ''
+                    },
+                    variant: 'text',
+                    color: 'secondary'
+                  }
+                }
+              ],
+              title: 'Adipiscing at in tellus',
+              decor: 'none'
+            }
+          },
+          {
+            id: 53,
+            pid: 18,
+            type: 'text-tab-images',
+            content: {
+              header: {
+                text: 'Planen',
+                layout: 5,
+                position: 'left'
+              },
+              bodytext:
+                '<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p> <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p> <p><em>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</em></p> <p>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat.</p>',
+              actions: [
+                {
+                  id: 80,
+                  pid: 18,
+                  type: 'a_01_01__action',
+                  content: {
+                    text: 'Unternehmen',
+                    link: {
+                      type: 'page',
+                      url: '/unternehmen',
+                      target: '',
+                      title: '',
+                      class: ''
+                    },
+                    variant: 'text',
+                    color: 'primary'
+                  }
+                }
+              ],
+              title: 'Lorem ipsum',
+              decor: 'circle'
+            }
+          },
+          {
+            id: 54,
+            pid: 18,
+            type: 'text-tab-images',
+            content: {
+              header: {
+                text: '',
+                layout: 6,
+                position: 'left'
+              },
+              bodytext:
+                '<strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</strong></p> <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p> <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p> <p>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat.',
+              actions: [
+                {
+                  id: 78,
+                  pid: 18,
+                  type: 'a_01_01__action',
+                  content: {
+                    text: 'Downloads &amp; Links',
+                    link: {
+                      type: 'page',
+                      url: '/downloads-links',
+                      target: '',
+                      title: '',
+                      class: ''
+                    },
+                    variant: 'text',
+                    color: 'primary',
+                    icon: {
+                      name: 'ArrowUpRight',
+                      position: 'trailing'
+                    }
+                  }
+                },
+                {
+                  id: 79,
+                  pid: 18,
+                  type: 'a_01_01__action',
+                  content: {
+                    text: 'API/Testing',
+                    link: {
+                      type: 'page',
+                      url: '/api',
+                      target: '',
+                      title: '',
+                      class: ''
+                    },
+                    variant: 'text',
+                    color: 'secondary'
+                  }
+                }
+              ],
+              title: 'Dolor sit amet',
               decor: 'none'
             }
           }
