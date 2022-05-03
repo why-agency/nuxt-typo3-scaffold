@@ -14,6 +14,7 @@
         <BaseAction variant="text" to="/main-intro-base">
           Main Into Base
         </BaseAction>
+        <BaseAction variant="text" to="/slider-card">Slider Card</BaseAction>
       </div>
     </div>
     <div>
