@@ -14,8 +14,8 @@
       :src="_srcset.src"
       :sizes="sizes"
       :alt="alt"
-      :class="size"
-      class="rounded-[inherit] object-cover"
+      :class="[fit, size]"
+      class="rounded-[inherit]"
     />
   </picture>
 </template>
@@ -54,6 +54,10 @@ export default {
     format: {
       type: String,
       default: undefined
+    },
+    fit: {
+      type: String,
+      default: 'object-cover'
     },
     size: {
       type: String,
