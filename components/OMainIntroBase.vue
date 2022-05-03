@@ -249,7 +249,7 @@ export default {
           transformOrigin: this.isTextRight ? 'right' : 'left',
           duration: 1.4,
           delay: 0.1,
-          ease: this.$CustomEase.create('custom', '0.08,0.82,0.17,1')
+          ease: this.$CustomEase?.create('custom', '0.08,0.82,0.17,1')
         })
         tl.to(
           overlay,
@@ -257,7 +257,7 @@ export default {
             autoAlpha: 0,
             duration: 0.1,
             delay: 1.4,
-            ease: this.$CustomEase.create('custom', '0.08,0.82,0.17,1')
+            ease: this.$CustomEase?.create('custom', '0.08,0.82,0.17,1')
           },
           0
         )
@@ -269,7 +269,7 @@ export default {
             scale: 1.3,
             transformOrigin: this.isTextRight ? 'right' : 'left',
             duration: 1.2,
-            ease: this.$CustomEase.create('custom', '0.08,0.82,0.17,1')
+            ease: this.$CustomEase?.create('custom', '0.08,0.82,0.17,1')
           },
           0
         )
@@ -279,7 +279,7 @@ export default {
           autoAlpha: 0,
           scale: 1.1,
           duration: 1.5,
-          ease: this.$CustomEase.create('custom', '0.46,0.03,0.52,0.96')
+          ease: this.$CustomEase?.create('custom', '0.46,0.03,0.52,0.96')
         })
       }
       tl.from(
@@ -289,7 +289,7 @@ export default {
           autoAlpha: 0,
           delay: 1.2,
           duration: this.isImageFullScreen ? 0.6 : 0.4,
-          ease: this.$CustomEase.create('custom', '0.46,0.03,0.52,0.96')
+          ease: this.$CustomEase?.create('custom', '0.46,0.03,0.52,0.96')
         },
         0
       )
@@ -301,7 +301,7 @@ export default {
         autoAlpha: 0,
         scale: 1.1,
         duration: 1,
-        ease: this.$CustomEase.create('custom', '0.08,0.82,0.17,1')
+        ease: this.$CustomEase?.create('custom', '0.08,0.82,0.17,1')
       })
       tl.from(textWrapper, {
         opacity: 0,

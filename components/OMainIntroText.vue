@@ -152,7 +152,7 @@ export default {
         duration: 0.8,
         x: offsetText,
         delay: 1.2,
-        ease: this.$CustomEase.create('custom', '0.22,0.61,0.36,1')
+        ease: this.$CustomEase?.create('custom', '0.22,0.61,0.36,1')
       })
       if (actions) {
         tl.from(
@@ -163,7 +163,7 @@ export default {
             delay: 0.75,
             duration: 0.6,
             x: this.isTextRight ? '-25px' : '25px',
-            ease: this.$CustomEase.create('custom', '0.25,0.46,0.45,0.94')
+            ease: this.$CustomEase?.create('custom', '0.25,0.46,0.45,0.94')
           },
           '<'
         )
@@ -176,7 +176,7 @@ export default {
         x: this.isTextRight ? '-25px' : '25px',
         duration: 1,
         delay: 0.6,
-        ease: this.$CustomEase.create('custom', '0.25,0.46,0.45,0.94')
+        ease: this.$CustomEase?.create('custom', '0.25,0.46,0.45,0.94')
       })
     }
   }
