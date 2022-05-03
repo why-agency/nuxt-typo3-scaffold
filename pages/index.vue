@@ -122,6 +122,8 @@
     <BaseReveal class="mt-20" :delay="5">
       <MActionBar class="mt-10" :actions="actions" />
     </BaseReveal> -->
+
+    <o-02-01-IntroMain />
   </div>
 </template>
 

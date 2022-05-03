@@ -58,7 +58,13 @@ export default {
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: [
+    '~/components',
+    '~/components/organisms',
+    '~/components/molecules',
+    { path: '~/components/icons', prefix: 'icon' },
+    { path: '~/components/base', pathPrefix: false, prefix: 'base' }
+  ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
