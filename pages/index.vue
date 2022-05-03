@@ -58,7 +58,14 @@
     <BaseSubline
       tag="p"
       v-bind="subline"
-      class="mt-6 lg:mt-12 line-clamp-3 md:max-w-3xl 2xl:max-w-5xl dark:text-white"
+      class="
+        mt-6
+        lg:mt-12
+        line-clamp-3
+        md:max-w-3xl
+        2xl:max-w-5xl
+        dark:text-white
+      "
     />
 
     <BaseCheckbox id="test" v-model="test">Label</BaseCheckbox>

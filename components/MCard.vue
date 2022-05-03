@@ -28,7 +28,19 @@
         :images="image"
         :srcsets="srcsets"
         :crop-variant="imageCropVariant"
-        class="relative before:block before:content-[''] before:w-full before:h-full before:absolute before:top-0 before:left-0 before:bg-gradient-to-b before:from-transparent before:to-black/60"
+        class="
+          relative
+          before:block
+          before:content-['']
+          before:w-full
+          before:h-full
+          before:absolute
+          before:top-0
+          before:left-0
+          before:bg-gradient-to-b
+          before:from-transparent
+          before:to-black/60
+        "
       />
       <div
         v-if="header && header.text"
@@ -49,7 +61,18 @@
         >
           <div
             v-if="!isTextCard"
-            class="invisible bg-white text-primary w-8 h-8 flex items-center justify-center flex-shrink-0 self-end"
+            class="
+              invisible
+              bg-white
+              text-primary
+              w-8
+              h-8
+              flex
+              items-center
+              justify-center
+              flex-shrink-0
+              self-end
+            "
             :class="{ '!visible': isHovered }"
           >
             <IconArrowRightMedium class="w-5" />

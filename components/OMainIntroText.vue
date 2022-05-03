@@ -1,7 +1,19 @@
 <template>
   <div
     ref="textWrapper"
-    class="relative z-20 flex flex-col justify-end px-6 pt-8 pb-10 lg:p-16 xl:px-24 xl:pt-24 3xl:pb-20 dark:text-white"
+    class="
+      relative
+      z-20
+      flex flex-col
+      justify-end
+      px-6
+      pt-8
+      pb-10
+      lg:p-16
+      xl:px-24 xl:pt-24
+      3xl:pb-20
+      dark:text-white
+    "
     :class="{
       [backgroundColor]: hasBackground,
       'lg:w-full 2xl:pb-32 3xl:pb-44': isImageFullScreen,
