@@ -25,12 +25,7 @@
         <BaseHeadline
           v-bind="header"
           ref="headline"
-          class="
-            invisible
-            max-w-[100vw]
-            px-6
-            xl:max-w-auto xl:px-0 xl:pr-0 xl:pl-24
-          "
+          class="invisible max-w-[100vw] px-6 xl:max-w-auto xl:px-0 xl:pr-0 xl:pl-24"
           :class="{
             'absolute bottom-5 xl:top-16 max-w-[calc(100vw-48px)] xl:max-w-[516px]':
               hasHeaderImage,
@@ -40,14 +35,7 @@
       </div>
       <div
         ref="text"
-        class="
-          invisible
-          mt-8
-          max-w-[100vw]
-          px-6
-          md:max-w-screen-sm
-          xl:max-w-[516px] xl:pr-0 xl:pl-24 xl:mt-12
-        "
+        class="invisible mt-8 max-w-[100vw] px-6 md:max-w-screen-sm xl:max-w-[516px] xl:pr-0 xl:pl-24 xl:mt-12"
         :class="{
           'xl:absolute xl:bottom-20': hasHeaderImage,
           'xl:text-white': hasDarkGradient
@@ -112,15 +100,7 @@
       </OCarousel>
       <div
         ref="controls"
-        class="
-          invisible
-          flex
-          justify-between
-          xl:space-x-10
-          my-12
-          mx-6
-          xl:mr-24 xl:justify-end xl:mt-20
-        "
+        class="invisible flex justify-between xl:space-x-10 my-12 mx-6 xl:mr-24 xl:justify-end xl:mt-20"
         :class="{ 'xl:my-20': hasHeaderImage }"
       >
         <portal-target :name="`${id}-bullets`" />

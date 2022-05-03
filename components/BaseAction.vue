@@ -1,19 +1,7 @@
 <template>
   <UseDynamicAction
     :to="to"
-    class="
-      inline-flex
-      items-center
-      cursor-pointer
-      disabled:opacity-30 disabled:pointer-events-none
-      focus:outline-none
-      transition
-      duration-500
-      text-button
-      font-secondary font-medium
-      uppercase
-      w-max
-    "
+    class="inline-flex items-center cursor-pointer disabled:opacity-30 disabled:pointer-events-none focus:outline-none transition duration-500 text-button font-secondary font-medium uppercase w-max"
     :class="[...classes, $_color, $_size, $_border, $_focus]"
   >
     <div

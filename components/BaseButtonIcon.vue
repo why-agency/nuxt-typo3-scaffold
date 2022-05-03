@@ -1,19 +1,7 @@
 <template>
   <button
     :disabled="disabled"
-    class="
-      inline-flex
-      justify-center
-      items-center
-      cursor-pointer
-      uppercase
-      disabled:opacity-50 disabled:pointer-events-none
-      focus:outline-none
-      focus-visible:ring focus-visible:ring-focus
-      transition
-      ease-hover
-      duration-300
-    "
+    class="inline-flex justify-center items-center cursor-pointer uppercase disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus-visible:ring focus-visible:ring-focus transition ease-hover duration-300"
     :class="[$_size, $_color]"
     @click="$emit('click')"
   >
