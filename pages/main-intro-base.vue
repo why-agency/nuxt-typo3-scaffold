@@ -17,10 +17,10 @@ export default {
         variant: 'dark',
         alignment: 'text-left',
         imagevariant: 'image-cropped',
-        background: 'none',
-        animation: 'no',
+        background: '',
+        animation: 'yes',
         header: {
-          text: 'this is a main intro with image on the left',
+          text: 'this is a main intro with image on the right',
           layout: 1
         },
 
@@ -403,10 +403,10 @@ export default {
         alignment: 'text-left',
         imagevariant: 'image-fullscreen',
         background: 'none',
-        animation: 'no',
+        animation: 'yes',
         header: {
           text: 'this is a main intro <br /> with fullscreen Image.',
-          layout: 2
+          layout: 1
         },
 
         bodytext: {
