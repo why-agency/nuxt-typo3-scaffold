@@ -5,13 +5,10 @@
     <div
       v-if="hasImage"
       class="lg:hidden mb-10"
-      :class="{ 'relative self-end w-[calc(100%-28px)] mt-6': hasDeco }"
+      :class="{ 'relative self-start md:self-end w-[calc(100%-28px)] mt-6': hasDeco }"
     >
-      <BasePicture :images="tab.image" :srcsets="srcsets" class="rounded" />
-      <BaseDecoCircle
-        v-if="hasDeco"
-        class="!absolute -top-20 mt-3 -left-7 px-0 w-20"
-      />
+      <BasePicture :images="tab.image" :srcsets="srcsets" size="h-44 w-full sm:h-60 md:h-80" class="rounded" />
+
     </div>
     <BaseHeadline v-bind="tab.header" class="mb-6 lg:invisible" />
     <BaseSubline

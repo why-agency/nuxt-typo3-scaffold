@@ -1,14 +1,18 @@
 <template>
   <section
     ref="target"
-    class="grid lg:grid-cols-[344px,1fr,488px] 2xl:grid-cols-[344px,1fr,632px] lg:gap-y-24"
+    class="
+      grid
+      mx-6
+      lg:mx-40
+      lg:mt-16
+      lg:grid-cols-[344px,1fr,488px]
+      2xl:grid-cols-[344px,1fr,632px]
+      lg:gap-y-24
+    "
   >
     <div ref="tabHeader" class="lg:col-span-2 lg:self-end lg:mr-32">
-      <BaseHeadline
-        v-if="header.text"
-        v-bind="header"
-        class="mb-10 invisible"
-      />
+      <BaseHeadline v-if="header.text" v-bind="header" class="mb-10" />
       <MActionBar
         v-if="actions"
         :actions="actions"
@@ -19,7 +23,7 @@
     <div
       v-if="activeTab && hasImage"
       ref="imageWrapper"
-      class="hidden lg:block lg:invisible justify-self-end relative"
+      class="hidden justify-self-end lg:block lg:invisible relative"
       :class="
         isLandscape
           ? 'lg:w-[488px] 2xl:w-[632px] transform 4xl:translate-x-20'
@@ -36,10 +40,7 @@
         class="absolute top-0 left-0 w-full h-full bg-white z-10"
         aria-hidden="true"
       />
-      <BaseDecoCircle
-        v-if="hasDeco"
-        class="!absolute -left-16 -top-16 px-0 w-20 w-28 2xl:w-32 z-20"
-      />
+
     </div>
     <OTabTabbar
       ref="tabbar"
@@ -185,7 +186,7 @@ const displayHeaderAndTabbar = () => {
           x: 0,
           stagger: 0.15,
           duration: 0.7,
-          ease: $CustomEase.create('custom', '0.22,0.61,0.36,1')
+          ease: $CustomEase?.create('custom', '0.22,0.61,0.36,1')
         },
         '<'
       )
@@ -209,7 +210,7 @@ const displayActiveTab = () => {
         opacity: 1,
         x: 0,
         duration: 0.8,
-        ease: $CustomEase.create('custom', '0.22,0.61,0.36,1')
+        ease: $CustomEase?.create('custom', '0.22,0.61,0.36,1')
       },
       hasImage.value ? '<' : '>'
     )
@@ -223,7 +224,7 @@ const displayActiveTab = () => {
           scaleX: 0,
           transformOrigin: 'left',
           duration: 0.8,
-          ease: $CustomEase.create('custom', '0.22,0.61,0.36,1')
+          ease: $CustomEase?.create('custom', '0.22,0.61,0.36,1')
         },
         hasTabChanged.value ? '>' : '<'
       ).fromTo(
@@ -235,7 +236,7 @@ const displayActiveTab = () => {
           scale: 1,
           duration: 0.8,
           transformOrigin: 'right',
-          ease: $CustomEase.create('custom', '0.22,0.61,0.36,1')
+          ease: $CustomEase?.create('custom', '0.22,0.61,0.36,1')
         },
         '<'
       )
@@ -255,7 +256,7 @@ const hideInactiveTab = () =>
       scaleX: 1,
       transformOrigin: 'right',
       duration: 0.5,
-      ease: $CustomEase.create('custom', '0.22,0.61,0.36,1')
+      ease: $CustomEase?.create('custom', '0.22,0.61,0.36,1')
     })
     .to(
       imageWrapper.value,
@@ -264,7 +265,7 @@ const hideInactiveTab = () =>
         scale: 1.05,
         transformOrigin: 'right',
         duration: 0.5,
-        ease: $CustomEase.create('custom', '0.22,0.61,0.36,1')
+        ease: $CustomEase?.create('custom', '0.22,0.61,0.36,1')
       },
       '<'
     )
@@ -275,7 +276,7 @@ const hideInactiveTab = () =>
         opacity: 0,
         x: -24,
         duration: 0.4,
-        ease: $CustomEase.create('custom', '0.22,0.61,0.36,1')
+        ease: $CustomEase?.create('custom', '0.22,0.61,0.36,1')
       },
       '<'
     )
