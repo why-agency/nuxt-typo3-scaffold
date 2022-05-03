@@ -11,6 +11,9 @@
           Text Accordion
         </BaseAction>
         <BaseAction variant="text" to="/text-media">Text Media</BaseAction>
+        <BaseAction variant="text" to="/main-intro-base">
+          Main Into Base
+        </BaseAction>
       </div>
     </div>
     <div>
