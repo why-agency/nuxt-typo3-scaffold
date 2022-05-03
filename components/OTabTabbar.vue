@@ -11,7 +11,12 @@
         class="flex w-full justify-between items-center text-left"
         @click.native="handleTabClick(tab)"
       >
-        <BaseHeadline v-if="isLarge" :layout="5" :text="tab.title" />
+        <BaseHeadline
+          v-if="isLarge"
+          :layout="5"
+          :text="tab.title"
+          class="normal-case"
+        />
         <BaseSubline
           v-else
           :layout="2"

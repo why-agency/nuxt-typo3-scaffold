@@ -11,13 +11,7 @@
       4xl:ml-40
     "
   >
-    <div
-      v-if="hasImage"
-      class="lg:hidden mb-10"
-      :class="{
-        'relative self-start md:self-end w-[calc(100%-28px)] mt-6': hasDeco
-      }"
-    >
+    <div v-if="hasImage" class="lg:hidden mb-10">
       <BasePicture
         :images="tab.image"
         :srcsets="srcsets"
@@ -55,10 +49,6 @@ defineProps({
   srcsets: {
     type: Object,
     default: null
-  },
-  hasDeco: {
-    type: Boolean,
-    default: false
   }
 })
 </script>

@@ -52,7 +52,6 @@
           :tab="activeTab"
           :has-image="hasImage"
           :srcsets="srcsets"
-          :has-deco="hasDeco"
           class="lg:hidden"
         />
       </template>
@@ -67,14 +66,7 @@
 </template>
 
 <script setup>
-import {
-  ref,
-  computed,
-  watch,
-  provide,
-  useContext
-} from '@nuxtjs/composition-api'
-import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
+import { ref, computed, watch, useContext } from '@nuxtjs/composition-api'
 import { gsap } from 'gsap'
 import { useIntersectionObserver } from '../composables/useIntersectionObserver'
 
@@ -97,9 +89,6 @@ const props = defineProps({
     default: 'images'
   }
 })
-
-const breakpoints = useBreakpoints(breakpointsTailwind)
-const isLg = breakpoints.greater('lg')
 
 /** visibility */
 const target = ref(null)
@@ -141,15 +130,11 @@ const srcsets = computed(() => ({
 
 /** MODULE VARIANTS */
 const hasImage = computed(() => props.variant === 'images')
-const hasDeco = computed(() => activeTab.value?.decor === 'circle')
 const isLarge = computed(() => props.tabs.length <= 5 && !hasImage.value)
 
 /** START ANIMATION */
 const { $CustomEase } = useContext()
 const tl = gsap.timeline()
-// "deco" animation settings override:
-provide('delay', ref(0))
-provide('duration', isLg ? ref(1) : ref(0))
 
 // animated elements:
 const overlay = ref(null)
