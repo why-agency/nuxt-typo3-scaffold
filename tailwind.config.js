@@ -27,7 +27,8 @@ module.exports = {
       white: '#fff',
       focus: '#6c9cde',
       error: '#d00f26',
-      success: '#89d27d'
+      success: '#89d27d',
+      transparent: 'transparent'
     },
     fontFamily: {
       primary: 'Favorit Std',
@@ -128,5 +129,6 @@ module.exports = {
         hover: 'cubic-bezier(0.88, 0.00, 0.35, 0.99)'
       }
     }
-  }
+  },
+  plugins: [require('@tailwindcss/aspect-ratio')]
 }

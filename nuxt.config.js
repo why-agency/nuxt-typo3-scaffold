@@ -75,7 +75,13 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/axios', '@/modules/typo3', 'nuxt-i18n', '@nuxtjs/gtm'],
+  modules: [
+    '@nuxtjs/axios',
+    '@/modules/typo3',
+    'nuxt-i18n',
+    '@nuxtjs/gtm',
+    'portal-vue/nuxt'
+  ],
 
   /*
    ** TYPO3 module configuration
@@ -143,8 +149,8 @@ export default {
       motionPath: false,
       pixi: false,
       text: false,
-      scrollTo: false,
-      scrollTrigger: false
+      scrollTo: true,
+      scrollTrigger: true
     },
     extraEases: {
       expoScaleEase: false,
