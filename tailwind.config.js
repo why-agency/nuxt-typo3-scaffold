@@ -14,7 +14,7 @@ module.exports = {
         inverse: '#fff'
       },
       secondary: {
-        DEFAULT: '#C0DBDA',
+        DEFAULT: '#6A9E9C',
         hover: '#98B8B7',
         inverse: '#fff'
       },
