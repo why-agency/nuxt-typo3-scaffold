@@ -27,7 +27,8 @@ module.exports = {
       white: '#fff',
       focus: '#6c9cde',
       error: '#d00f26',
-      success: '#89d27d'
+      success: '#89d27d',
+      transparent: 'transparent'
     },
     fontFamily: {
       primary: 'Favorit Std',
