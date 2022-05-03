@@ -1,15 +1,11 @@
 <template>
   <div>
-    <section>
-      <div class="frame-default space-after-default">
-        <OMainIntroBase v-bind="data1" />
-      </div>
-    </section>
-    <section>
-      <div class="frame-full space-after-default">
-        <OMainIntroBase v-bind="data2" />
-      </div>
-    </section>
+    <CeFrame>
+      <OMainIntroBase v-bind="data1" />
+    </CeFrame>
+    <CeFrame>
+      <OMainIntroBase v-bind="data2" />
+    </CeFrame>
   </div>
 </template>
 
