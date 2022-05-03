@@ -4,9 +4,7 @@
     class="
       grid
       mx-6
-      lg:mx-40
-      lg:mt-16
-      lg:grid-cols-[344px,1fr,488px]
+      lg:mx-40 lg:mt-16 lg:grid-cols-[344px,1fr,488px]
       2xl:grid-cols-[344px,1fr,632px]
       lg:gap-y-24
     "
@@ -40,7 +38,6 @@
         class="absolute top-0 left-0 w-full h-full bg-white z-10"
         aria-hidden="true"
       />
-
     </div>
     <OTabTabbar
       ref="tabbar"

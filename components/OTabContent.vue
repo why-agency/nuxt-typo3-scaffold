@@ -1,14 +1,29 @@
 <template>
   <div
-    class="invisible lg:visible lg:col-span-2 lg:max-w-[736px] flex flex-col pb-10 lg:pb-0 2xl:ml-10 3xl:ml-16 4xl:ml-40"
+    class="
+      invisible
+      lg:visible lg:col-span-2 lg:max-w-[736px]
+      flex flex-col
+      pb-10
+      lg:pb-0
+      2xl:ml-10
+      3xl:ml-16
+      4xl:ml-40
+    "
   >
     <div
       v-if="hasImage"
       class="lg:hidden mb-10"
-      :class="{ 'relative self-start md:self-end w-[calc(100%-28px)] mt-6': hasDeco }"
+      :class="{
+        'relative self-start md:self-end w-[calc(100%-28px)] mt-6': hasDeco
+      }"
     >
-      <BasePicture :images="tab.image" :srcsets="srcsets" size="h-44 w-full sm:h-60 md:h-80" class="rounded" />
-
+      <BasePicture
+        :images="tab.image"
+        :srcsets="srcsets"
+        size="h-44 w-full sm:h-60 md:h-80"
+        class="rounded"
+      />
     </div>
     <BaseHeadline v-bind="tab.header" class="mb-6 lg:invisible" />
     <BaseSubline

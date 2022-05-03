@@ -405,8 +405,10 @@ export default {
                     description: null,
                     mimeType: 'image/jpeg',
                     type: 'image',
-                    filename: 'and_why_agency_case_study_humana_vr_ergebnis.webp',
-                    originalUrl: 'fileadmin/user_upload/and_why_agency_case_study_humana_vr_ergebnis.webp',
+                    filename:
+                      'and_why_agency_case_study_humana_vr_ergebnis.webp',
+                    originalUrl:
+                      'fileadmin/user_upload/and_why_agency_case_study_humana_vr_ergebnis.webp',
                     uidLocal: 27,
                     fileReferenceUid: 78,
                     size: '52 KB',
@@ -462,8 +464,10 @@ export default {
                     description: null,
                     mimeType: 'image/jpeg',
                     type: 'image',
-                    filename: 'and_why_agency_case_study_humana_vr_ergebnis.webp',
-                    originalUrl: 'fileadmin/user_upload/and_why_agency_case_study_humana_vr_ergebnis.webp',
+                    filename:
+                      'and_why_agency_case_study_humana_vr_ergebnis.webp',
+                    originalUrl:
+                      'fileadmin/user_upload/and_why_agency_case_study_humana_vr_ergebnis.webp',
                     uidLocal: 27,
                     fileReferenceUid: 78,
                     size: '36 KB',
