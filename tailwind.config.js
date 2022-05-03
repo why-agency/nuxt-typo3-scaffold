@@ -9,25 +9,25 @@ module.exports = {
     colors: {
       gray: colors.trueGray,
       primary: {
-        DEFAULT: '#000',
-        hover: '#5C5C5C',
+        DEFAULT: '#1D2F2F',
+        hover: '#2B4444',
         inverse: '#fff'
       },
       secondary: {
-        DEFAULT: '#545454',
-        hover: '#a9a9a9',
+        DEFAULT: '#C0DBDA',
+        hover: '#98B8B7',
         inverse: '#fff'
       },
       tertiary: {
-        DEFAULT: '#c8c8c8',
-        hover: '#7e7e7e',
+        DEFAULT: '#E0D6B7',
+        hover: '#C6BB9A',
         inverse: '#000'
       },
       black: '#000',
       white: '#fff',
       focus: '#6c9cde',
       error: '#d00f26',
-      success: '#89d27d',
+      success: '#89D27D',
       transparent: 'transparent'
     },
     fontFamily: {
