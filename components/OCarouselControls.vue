@@ -7,14 +7,14 @@
       variant="outline"
       @click="go('<')"
     >
-      <IconArrowLeft />
+      <IconArrowLeftMedium />
     </BaseButtonIcon>
     <BaseButtonIcon
       :color="isDark ? 'white' : 'primary'"
       variant="outline"
       @click="go('>')"
     >
-      <IconArrowRight />
+      <IconArrowRightMedium />
     </BaseButtonIcon>
   </div>
 </template>
