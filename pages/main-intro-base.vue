@@ -269,7 +269,7 @@ export default {
               mimeType: 'image/jpeg',
               type: 'image',
               filename: 'csm_demo_003_4d14d3d2e5.jpg',
-              
+
               uidLocal: 6,
               fileReferenceUid: 8,
               size: '355 KB',
@@ -403,7 +403,6 @@ export default {
         ]
       },
       data2: {
-    
         variant: 'dark',
         alignment: 'text-left',
         imagevariant: 'image-fullscreen',
@@ -743,11 +742,9 @@ export default {
                 class: ''
               },
               variant: 'outline',
-              color: 'white',
-              
-              
+              color: 'white'
             }
-          }, 
+          },
           {
             id: 5,
             pid: 7,
@@ -762,11 +759,9 @@ export default {
                 class: ''
               },
               variant: 'outline',
-              color: 'white',
-            
-              
+              color: 'white'
             }
-          }, 
+          },
           {
             id: 6,
             pid: 7,
@@ -781,9 +776,9 @@ export default {
                 class: ''
               },
               variant: 'filled',
-              color: 'primary',
+              color: 'primary'
             }
-          },
+          }
         ]
       }
     }
