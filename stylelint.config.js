@@ -3,16 +3,13 @@ module.exports = {
   // add your custom config here
   // https://stylelint.io/user-guide/configuration
   rules: {
-    'selector-pseudo-class-no-unknown':[
+    'selector-pseudo-class-no-unknown': [
       true,
-      {ignorePseudoClasses: ['global','deep']
-      }
+      { ignorePseudoClasses: ['global', 'deep'] }
     ],
-    'selector-pseudo-element-no-unknown':[
+    'selector-pseudo-element-no-unknown': [
       true,
-      {ignorePseudoClasses: ['v-deep']
-      }
-    ],
-
+      { ignorePseudoClasses: ['v-deep'] }
+    ]
   }
 }

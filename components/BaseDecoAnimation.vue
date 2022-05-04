@@ -8,7 +8,16 @@
     <slot name="text">
       <span
         v-if="text"
-        class="px-4 pt-3 font-semibold transform text-body2-mobile lg:text-body2 whitespace-nowrap lg:-rotate-90"
+        class="
+          px-4
+          pt-3
+          font-semibold
+          transform
+          text-body2-mobile
+          lg:text-body2
+          whitespace-nowrap
+          lg:-rotate-90
+        "
       >
         {{ text }}
       </span>

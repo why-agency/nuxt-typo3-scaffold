@@ -1,7 +1,14 @@
 <template>
   <li
     ref="target"
-    class="lg:grid lg:grid-cols-[minmax(auto,440px),auto] lg:gap-x-16 3xl:gap-x-28 w-screen whitespace-normal invisible lg:visible"
+    class="
+      lg:grid lg:grid-cols-[minmax(auto,440px),auto] lg:gap-x-16
+      3xl:gap-x-28
+      w-screen
+      whitespace-normal
+      invisible
+      lg:visible
+    "
     :class="
       isActive ? 'relative z-10 order-1' : 'absolute top-0 left-0 order-2'
     "
@@ -49,7 +56,17 @@
     >
       <div
         ref="overlay"
-        class="hidden lg:block absolute top-0 left-0 w-full h-full bg-white z-30"
+        class="
+          hidden
+          lg:block
+          absolute
+          top-0
+          left-0
+          w-full
+          h-full
+          bg-white
+          z-30
+        "
       />
       <img :src="image" :srcset="srcset" class="lg:rounded-lg" />
     </div>

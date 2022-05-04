@@ -1,7 +1,13 @@
 <template>
   <li
     ref="target"
-    class="invisible h-[calc(100vh-64px)] w-screen lg:h-screen whitespace-normal"
+    class="
+      invisible
+      h-[calc(100vh-64px)]
+      w-screen
+      lg:h-screen
+      whitespace-normal
+    "
     :class="[
       { dark: isDark && !isBoxed },
       isActive ? 'relative z-20 order-1' : 'absolute top-0 left-0 order-2'
@@ -10,7 +16,19 @@
     <div class="frame-default block">
       <div
         ref="textBox"
-        class="relative flex flex-col z-10 px-4 py-6 my-6 md:px-10 md:py-12 lg:mt-20 dark:text-white rounded-lg lg:w-[416px]"
+        class="
+          relative
+          flex flex-col
+          z-10
+          px-4
+          py-6
+          my-6
+          md:px-10 md:py-12
+          lg:mt-20
+          dark:text-white
+          rounded-lg
+          lg:w-[416px]
+        "
         :class="{
           'lg:invisible bg-white box-shadow': isBoxed,
           'lg:w-[800px]': !isBoxed

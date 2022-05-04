@@ -260,7 +260,8 @@ export default {
                 layout: 2,
                 position: 'left'
               },
-              subline: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tincidunt nunc pulvinar sapien. Amet justo donec enim diam vulputate ut pharetra. Sed id semper risus in hendrerit gravida rutrum. Massa massa ultricies mi quis quis!!!',
+              subline:
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tincidunt nunc pulvinar sapien. Amet justo donec enim diam vulputate ut pharetra. Sed id semper risus in hendrerit gravida rutrum. Massa massa ultricies mi quis quis!!!',
               image: [
                 {
                   publicUrl:
@@ -487,7 +488,7 @@ export default {
             }
           }
         ]
-      }, 
+      },
       data2: {
         variant: 'ext-overlay',
         slides: [

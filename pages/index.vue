@@ -16,7 +16,9 @@
         </BaseAction>
         <BaseAction variant="text" to="/slider-card">Slider Card</BaseAction>
         <BaseAction variant="text" to="/tab-base">Tab</BaseAction>
-        <BaseAction variant="text" to="/slider-image-text">Slider Image Text</BaseAction>
+        <BaseAction variant="text" to="/slider-image-text">
+          Slider Image Text
+        </BaseAction>
       </div>
     </div>
     <div>
