@@ -34,24 +34,19 @@
 </template>
 
 <script>
-import { computed } from '@nuxtjs/composition-api'
-
-import { useBreakpoints } from '@vueuse/core'
-import { breakpoints as breakpointsProject } from '@/utils/breakpoints'
-
 export default {
   props: {
     dark: {
       type: Boolean
+    },
+    width: {
+      type: Number,
+      default: 64
+    },
+    height: {
+      type: Number,
+      default: 24
     }
-  },
-  setup() {
-    const breakpoints = useBreakpoints(breakpointsProject)
-    const isLarge = breakpoints.greater('lg')
-    const width = computed(() => (isLarge.value ? 168 : 105))
-    const height = computed(() => (isLarge.value ? 64 : 40))
-
-    return { width, height }
   }
 }
 </script>

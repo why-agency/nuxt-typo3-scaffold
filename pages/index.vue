@@ -102,6 +102,8 @@
 </template>
 
 <script>
+import { SET_PAGE } from '~typo3/store/mutation-types'
+
 export default {
   data() {
     return {
@@ -182,6 +184,443 @@ export default {
         }
       ]
     }
+  },
+  mounted() {
+    this.$store.commit(SET_PAGE, {
+      structure: {
+        navigation: {
+          context: {
+            ctype: 'o_01_01__navigation_main',
+            cid: 'O0101NavigationMain',
+            uid: 15,
+            pid: 1
+          },
+          content: {
+            navigationOuterPages: [
+              {
+                title: 'API Testing',
+                link: '/api-testing',
+                target: '',
+                active: 0,
+                current: 0,
+                spacer: 0
+              },
+              {
+                title: 'Link 2',
+                link: '/link2',
+                target: '',
+                active: 0,
+                current: 0,
+                spacer: 0
+              },
+              {
+                title: 'Link 3',
+                link: '/link3',
+                target: '',
+                active: 0,
+                current: 0,
+                spacer: 0
+              },
+              {
+                title: 'Link 4',
+                link: '/link4',
+                target: '',
+                active: 0,
+                current: 0,
+                spacer: 0
+              }
+            ],
+            navigationInnerPages: [
+              {
+                title: 'API Testing',
+                link: '/',
+                target: '',
+                active: 0,
+                current: 0,
+                spacer: 0,
+                children: [
+                  {
+                    title: 'Text Multicolumn',
+                    link: '/text-multicolumn',
+                    target: '',
+                    active: 0,
+                    current: 0,
+                    spacer: 0,
+                    children: [
+                      {
+                        title: 'Unterseite 1',
+                        link: '/unterseite1',
+                        target: '',
+                        active: 0,
+                        current: 0,
+                        spacer: 0
+                      },
+                      {
+                        title: 'Unterseite 2',
+                        link: '/unterseite2',
+                        target: '',
+                        active: 0,
+                        current: 0,
+                        spacer: 0
+                      }
+                    ]
+                  },
+                  {
+                    title: 'Text Media',
+                    link: '/text-media',
+                    target: '',
+                    active: 0,
+                    current: 0,
+                    spacer: 0
+                  },
+                  {
+                    title: 'Text Accordion',
+                    link: '/text-accordion',
+                    target: '',
+                    active: 0,
+                    current: 0,
+                    spacer: 0
+                  },
+                  {
+                    title: 'Slider Card',
+                    link: '/slider-card',
+                    target: '',
+                    active: 0,
+                    current: 0,
+                    spacer: 0
+                  },
+                  {
+                    title: 'Intro Main',
+                    link: '/main-intro-base',
+                    target: '',
+                    active: 0,
+                    current: 0,
+                    spacer: 0
+                  }
+                ]
+              },
+              {
+                title: 'Link 2',
+                link: '/',
+                target: '',
+                active: 0,
+                current: 0,
+                spacer: 0,
+                children: [
+                  {
+                    title: 'Link 2.1',
+                    link: '/',
+                    target: '',
+                    active: 0,
+                    current: 0,
+                    spacer: 0
+                  }
+                ]
+              },
+              {
+                title: 'Link 3',
+                link: '/unternehmen',
+                target: '',
+                active: 0,
+                current: 0,
+                spacer: 0,
+                children: [
+                  {
+                    title: 'Link 3.1',
+                    link: '/',
+                    target: '',
+                    active: 0,
+                    current: 0,
+                    spacer: 0
+                  },
+                  {
+                    title: 'Link 3.2',
+                    link: '/',
+                    target: '',
+                    active: 0,
+                    current: 0,
+                    spacer: 0
+                  },
+                  {
+                    title: 'Link 3.3.',
+                    link: '/',
+                    target: '',
+                    active: 0,
+                    current: 0,
+                    spacer: 0
+                  },
+                  {
+                    title: 'Link 3.4',
+                    link: '/',
+                    target: '',
+                    active: 0,
+                    current: 0,
+                    spacer: 0
+                  }
+                ]
+              },
+              {
+                title: 'Link 4',
+                link: '/',
+                target: '',
+                active: 0,
+                current: 0,
+                spacer: 0,
+                children: [
+                  {
+                    title: 'Link 4.1',
+                    link: '/',
+                    target: '',
+                    active: 0,
+                    current: 0,
+                    spacer: 0
+                  },
+                  {
+                    title: 'Link 4.2',
+                    link: '/',
+                    target: '',
+                    active: 0,
+                    current: 0,
+                    spacer: 0
+                  },
+                  {
+                    title: 'Link 4.3',
+                    link: '/',
+                    target: '',
+                    active: 0,
+                    current: 0,
+                    spacer: 0
+                  }
+                ]
+              },
+              {
+                title: 'Link 5',
+                link: '/',
+                target: '',
+                active: 0,
+                current: 0,
+                spacer: 0,
+                children: [
+                  {
+                    title: 'Link 5.1',
+                    link: '/',
+                    target: '',
+                    active: 0,
+                    current: 0,
+                    spacer: 0
+                  },
+                  {
+                    title: 'Link 5.2',
+                    link: '/',
+                    target: '',
+                    active: 0,
+                    current: 0,
+                    spacer: 0
+                  },
+                  {
+                    title: 'Link 5.3',
+                    link: '/',
+                    target: '',
+                    active: 0,
+                    current: 0,
+                    spacer: 0
+                  },
+                  {
+                    title: 'Link 5.4',
+                    link: '/',
+                    target: '',
+                    active: 0,
+                    current: 0,
+                    spacer: 0
+                  },
+                  {
+                    title: 'Link 5.5',
+                    link: '/',
+                    target: '',
+                    active: 0,
+                    current: 0,
+                    spacer: 0
+                  },
+                  {
+                    title: 'Link 5.6',
+                    link: '/api/o-03-04-text-image-tab',
+                    target: '',
+                    active: 0,
+                    current: 0,
+                    spacer: 0
+                  },
+                  {
+                    title: 'Link 5.7',
+                    link: '/',
+                    target: '',
+                    active: 0,
+                    current: 0,
+                    spacer: 0
+                  }
+                ]
+              },
+              {
+                title: 'Kontakt',
+                link: '/kontakt',
+                target: '',
+                active: 0,
+                current: 0,
+                spacer: 0,
+                children: [
+                  {
+                    title: 'Kontaktdaten',
+                    link: '/kontaktdaten',
+                    target: '',
+                    active: 0,
+                    current: 0,
+                    spacer: 0
+                  },
+                  {
+                    title: 'Impressum',
+                    link: '/impressum',
+                    target: '',
+                    active: 0,
+                    current: 0,
+                    spacer: 0
+                  },
+                  {
+                    title: 'Anfahrt',
+                    link: '/anfahrt',
+                    target: '',
+                    active: 0,
+                    current: 0,
+                    spacer: 0
+                  }
+                ]
+              }
+            ],
+            navigationInnerContext: [
+              {
+                id: 25,
+                pid: 1,
+                type: 'a_01_01__action',
+                content: {
+                  text: 'Kontakt',
+                  link: {
+                    type: 'page',
+                    url: '/',
+                    target: '',
+                    title: '',
+                    class: ''
+                  },
+                  variant: '',
+                  color: ''
+                }
+              },
+              {
+                id: 26,
+                pid: 1,
+                type: 'a_01_01__action',
+                content: {
+                  text: 'Downloads und Links',
+                  link: {
+                    type: 'page',
+                    url: '/',
+                    target: '',
+                    title: '',
+                    class: ''
+                  },
+                  variant: '',
+                  color: ''
+                }
+              }
+            ],
+            navigationInnerSocialMedia: [
+              {
+                id: 27,
+                pid: 1,
+                type: 'a_01_01__action',
+                content: {
+                  text: 'https://www.facebook.com',
+                  link: {
+                    type: 'url',
+                    url: 'https://www.facebook.com',
+                    target: '',
+                    title: '',
+                    class: ''
+                  },
+                  variant: '',
+                  color: '',
+                  icon: {
+                    name: 'Facebook',
+                    position: ''
+                  }
+                }
+              },
+              {
+                id: 28,
+                pid: 1,
+                type: 'a_01_01__action',
+                content: {
+                  text: 'https://www.twitter.com',
+                  link: {
+                    type: 'url',
+                    url: 'https://www.twitter.com',
+                    target: '',
+                    title: '',
+                    class: ''
+                  },
+                  variant: '',
+                  color: '',
+                  icon: {
+                    name: 'Twitter',
+                    position: ''
+                  }
+                }
+              },
+              {
+                id: 30,
+                pid: 1,
+                type: 'a_01_01__action',
+                content: {
+                  text: 'https://www.xing.com/',
+                  link: {
+                    type: 'url',
+                    url: 'https://www.xing.com/',
+                    target: '',
+                    title: '',
+                    class: ''
+                  },
+                  variant: '',
+                  color: '',
+                  icon: {
+                    name: 'Xing',
+                    position: ''
+                  }
+                }
+              },
+              {
+                id: 31,
+                pid: 1,
+                type: 'a_01_01__action',
+                content: {
+                  text: 'https://www.linkedin.com',
+                  link: {
+                    type: 'url',
+                    url: 'https://www.linkedin.com',
+                    target: '',
+                    title: '',
+                    class: ''
+                  },
+                  variant: '',
+                  color: '',
+                  icon: {
+                    name: 'LinkedIn',
+                    position: ''
+                  }
+                }
+              }
+            ],
+            navigationBreadcrumbs: []
+          }
+        }
+      }
+    })
   }
 }
 </script>
