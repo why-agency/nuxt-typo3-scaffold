@@ -27,7 +27,6 @@
     :class="$_linkStyle"
     :event="isDirectLink ? 'click' : ''"
     @click.native="handleClick"
-    @keydown.enter.native="handleEnter"
   >
     <slot />
     <template v-if="isMenuVisible">
@@ -119,12 +118,6 @@ export default {
       }
       if (this.level === 3) {
         this.$store.commit(`ui/SET_ACTIVE_TERTIARY_CATEGORY`, category)
-      }
-    },
-    handleEnter(e) {
-      if (this.level === 1 && this.isXl) {
-        e.preventDefault()
-        this.$store.dispatch('ui/openMenu', { activeCategory: this.item })
       }
     }
   }

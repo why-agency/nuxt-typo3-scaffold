@@ -124,26 +124,13 @@ export default {
   },
   mounted() {
     this.isMenuVisible = true
-    this.$store.subscribe((mutation, state) => {
-      if (
-        mutation.type === 'ui/SET_SEARCH_OVERLAY_STATE' &&
-        mutation.payload === true
-      ) {
-        this.isMenuVisible = false
-        this.$store.dispatch('ui/resetAllCategories')
-      }
-    })
   },
   methods: {
     closeMenu() {
-      this.$store.dispatch('ui/resetAllCategories')
       this.isMenuVisible = false
       setTimeout(() => {
         this.$store.dispatch('ui/closeMenu')
       }, 400)
-    },
-    displaySearchOverlay() {
-      this.$store.commit('ui/SET_SEARCH_OVERLAY_STATE', true)
     },
     handleClick(event) {
       if (!event.target.closest('.o-nav-menu-desktop__column')) {
