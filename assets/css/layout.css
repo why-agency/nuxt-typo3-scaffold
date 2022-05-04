@@ -1,17 +1,17 @@
 .space-before-small {
-  @apply mt-6 lg:mt-10;
+  @apply pt-6 lg:pt-10;
 }
 
 .space-after-small {
-  @apply mb-6 lg:mb-10;
+  @apply pb-6 lg:pb-10;
 }
 
 .space-before-default {
-  @apply mt-20 lg:mt-32;
+  @apply pt-20 lg:pt-32;
 }
 
 .space-after-default {
-  @apply mb-20 lg:mb-32;
+  @apply pb-20 lg:pb-32;
 }
 
 .frame-small {
@@ -28,8 +28,4 @@
 
 .frame-full {
   @apply w-screen;
-}
-
-.frame-full-bg {
-  @apply w-screen relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw] py-16 lg:py-28;
 }
