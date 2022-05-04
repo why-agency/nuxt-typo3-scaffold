@@ -32,6 +32,10 @@
             <BaseOverline text="Slider Image Text" />
             <IconArrowRightThin />
           </BaseAction>
+          <BaseAction variant="text" to="/404-page">
+            <BaseOverline text="Error page" />
+            <IconArrowRightThin />
+          </BaseAction>
         </div>
       </BaseReveal>
     </div>
