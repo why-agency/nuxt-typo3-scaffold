@@ -1,61 +1,54 @@
 <template>
-  <section :class="[backgroundColor, $_outerFrame]">
-    <div
-      class="grid gap-y-8 lg:gap-y-4 gap-x-12"
-      :class="[$_innerFrame, $_layout, $_textAlignment]"
-    >
-      <div v-for="col in columns" :key="col.id">
-        <BaseOverline
-          v-if="col.overline.text"
-          v-bind="col.overline"
-          class="mb-2 hyphens"
-          animate
-        />
+  <section
+    class="grid gap-y-8 lg:gap-y-4 gap-x-12"
+    :class="[$_layout, $_textAlignment, { dark: isDark }]"
+  >
+    <div v-for="col in columns" :key="col.id" class="dark:text-white">
+      <BaseOverline
+        v-if="col.overline.text"
+        v-bind="col.overline"
+        class="mb-2 hyphens"
+        animate
+      />
 
-        <BaseHeadline
-          v-if="col.header.text"
-          v-bind="col.header"
-          class="mb-6 hyphens"
-          animate
-        />
+      <BaseHeadline
+        v-if="col.header.text"
+        v-bind="col.header"
+        class="mb-6 hyphens"
+        animate
+      />
 
+      <BaseSubline
+        v-if="col.subline.text"
+        v-bind="col.subline"
+        class="mb-8 lg:mb-12 hyphens"
+        animate
+      />
+
+      <BaseReveal v-if="col.bodytext.text">
         <BaseSubline
-          v-if="col.subline.text"
-          v-bind="col.subline"
-          class="mb-8 lg:mb-12 hyphens"
-          animate
+          v-if="col.bodytext.text"
+          v-bind="col.bodytext"
+          class="mb-8 lg:mb-12 lg:mt-3"
         />
+      </BaseReveal>
 
-        <BaseReveal v-if="col.bodytext.text">
-          <BaseSubline
-            v-if="col.bodytext.text"
-            v-bind="col.bodytext"
-            class="mb-8 lg:mb-12 lg:mt-3"
-          />
-        </BaseReveal>
-
-        <BaseReveal v-if="col.actions">
-          <m-action-bar
-            :actions="col.actions"
-            position="left"
-            :stack="isXxl && has3Cols"
-            class="mb-12"
-          />
-        </BaseReveal>
-      </div>
+      <BaseReveal v-if="col.actions">
+        <m-action-bar
+          :actions="col.actions"
+          position="left"
+          :stack="isXxl && has3Cols"
+          class="mb-12"
+        />
+      </BaseReveal>
     </div>
   </section>
 </template>
 
 <script>
 import { useBreakpoints } from '@vueuse/core'
-import { useBackgroundColor } from '@/composables/useBackgroundColor'
 export default {
   props: {
-    background: {
-      type: String,
-      default: 'none'
-    },
     column1: {
       type: Object,
       default: undefined
@@ -78,15 +71,13 @@ export default {
     },
     appearance: {
       type: Object,
-      default: () => ({ frameClass: 'default' })
+      default: () => ({ background: 'none' })
     }
   },
   setup(props) {
     const breakpoints = useBreakpoints({ xxl: 1440 })
     const isXxl = breakpoints.greater('xxl')
-
-    const backgroundColor = useBackgroundColor(props.background)
-    return { isXxl, backgroundColor }
+    return { isXxl }
   },
   computed: {
     has1Col() {
@@ -122,18 +113,6 @@ export default {
         'lg:max-w-[860px]': this.has1Col
       }
     },
-    $_outerFrame() {
-      return { 'frame-full-bg': this.backgroundColor }
-    },
-    $_innerFrame() {
-      const { frameClass } = this.appearance
-      return (
-        this.backgroundColor && {
-          'frame-default': frameClass === 'default',
-          'frame-small': frameClass === 'small'
-        }
-      )
-    },
     $_textAlignment() {
       return this.has1Col
         ? {
@@ -142,6 +121,9 @@ export default {
             'justify-end': this.column1.position === 'right'
           }
         : 'justify-between'
+    },
+    isDark() {
+      return this.appearance?.background === 'bg-primary'
     }
   }
 }

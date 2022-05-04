@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CeFrame>
+    <CeFrame v-bind="appearance">
       <OSliderImageText v-bind="data1" />
     </CeFrame>
     <CeFrame>
@@ -13,10 +13,10 @@
 export default {
   data() {
     return {
+      appearance: {
+        frameClass: 'default'
+      },
       data1: {
-        appearance: {
-          frameClass: 'default'
-        },
         variant: 'text-deco',
         slides: [
           {
@@ -26,7 +26,7 @@ export default {
             content: {
               overline: '',
               header: {
-                text: 'Slider Image text-deco',
+                text: 'Slider Image text deco 1',
                 layout: 2,
                 position: 'left'
               },
@@ -259,7 +259,7 @@ export default {
             content: {
               overline: '',
               header: {
-                text: 'Headline',
+                text: 'Slider Image Text deco 2',
                 layout: 2,
                 position: 'left'
               },
@@ -493,10 +493,7 @@ export default {
         ]
       },
       data2: {
-        appearance: {
-          frameClass: 'full'
-        },
-        variant: 'ext-overlay',
+        variant: 'text-overlay',
         slides: [
           {
             id: 43,

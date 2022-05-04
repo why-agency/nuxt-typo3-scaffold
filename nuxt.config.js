@@ -5,7 +5,7 @@ import { dateTimeFormats } from './locales/dateTimeFormats'
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'gbk-corporate-pwa',
+    title: 'nuxt-typo3-scaffold',
     htmlAttrs: {
       lang: 'en'
     },

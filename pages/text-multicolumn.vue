@@ -1,14 +1,14 @@
 <template>
   <div>
-    <section class="frame-default space-after-default">
+    <CeFrame v-bind="data1.appearance">
       <OTextMulticolumn v-bind="data1" />
-    </section>
-    <section class="frame-small space-after-default">
+    </CeFrame>
+    <CeFrame v-bind="data2.appearance">
       <OTextMulticolumn v-bind="data2" />
-    </section>
-    <section class="frame-default space-after-default">
+    </CeFrame>
+    <CeFrame v-bind="data3.appearance">
       <OTextMulticolumn v-bind="data3" />
-    </section>
+    </CeFrame>
   </div>
 </template>
 
@@ -18,10 +18,11 @@ export default {
     return {
       data1: {
         appearance: {
-          frameClass: 'default'
+          frameClass: 'default',
+          spaceBefore: 'default',
+          background: 'bg-primary'
         },
         variant: '1col',
-        background: 'primary',
         column1: {
           position: 'left',
           overline: {
@@ -102,7 +103,7 @@ export default {
                   class: ''
                 },
                 variant: 'text',
-                color: 'secondary',
+                color: 'white',
                 size: 'default',
                 icon: {
                   name: 'ArrowRight',
@@ -118,7 +119,6 @@ export default {
           frameClass: 'small'
         },
         variant: '3col',
-        background: 'none',
         column1: {
           position: 'left',
           overline: {
@@ -263,7 +263,6 @@ export default {
           frameClass: 'default'
         },
         variant: '2col',
-        background: 'none',
         column1: {
           position: 'left',
           overline: {

@@ -10,12 +10,12 @@ module.exports = {
       gray: colors.trueGray,
       primary: {
         DEFAULT: '#1D2F2F',
-        hover: '#2B4444',
+        hover: '#4D7D7D',
         inverse: '#fff'
       },
       secondary: {
         DEFAULT: '#6A9E9C',
-        hover: '#98B8B7',
+        hover: '#29706D',
         inverse: '#fff'
       },
       tertiary: {

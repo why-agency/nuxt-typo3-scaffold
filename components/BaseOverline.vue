@@ -1,5 +1,9 @@
 <template>
-  <BaseHtmlParser tag="div" :content="text" />
+  <component :is="tag" class="font-secondary" :class="$_textStyle">
+    <slot>
+      <BaseHtmlParser tag="div" :content="text" />
+    </slot>
+  </component>
 </template>
 
 <script>
@@ -12,6 +16,10 @@ export default {
     layout: {
       type: Number,
       default: 1
+    },
+    tag: {
+      type: String,
+      default: 'div'
     }
   },
   computed: {
@@ -24,6 +32,9 @@ export default {
         'font-secondary md:text-overline3 font-medium uppercase':
           this.layout === 3
       }
+    },
+    overlineTag() {
+      return this.tag ? this.tag : `h${this.layout}`
     }
   }
 }
