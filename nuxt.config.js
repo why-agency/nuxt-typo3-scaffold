@@ -54,7 +54,8 @@ export default {
   plugins: [
     '@/plugins/i18n',
     '@/plugins/strip-html',
-    '@/plugins/scroll-lock.client'
+    '@/plugins/scroll-lock.client',
+    '@/plugins/typo3-components'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
