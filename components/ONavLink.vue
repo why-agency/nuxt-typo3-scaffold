@@ -17,7 +17,8 @@
       cursor-pointer
       disabled:opacity-30 disabled:pointer-events-none
       focus:outline-none
-      focus-visible:border-focus
+      focus-visible:border-focus focus-visible:ring
+      focus:ring-focus
       active:ring-0
       transition
       duration-300
