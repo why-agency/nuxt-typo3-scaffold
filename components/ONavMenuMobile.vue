@@ -62,16 +62,6 @@
     </div>
     <!--END NAV LINKS-->
 
-    <!--START LINK TO SEARCH & LANGUAGE SWITCH-->
-    <div ref="bottomLinks" class="flex justify-between items-center mt-12 mb-6">
-      <!-- <BaseAction variant="text" color="gray" class="w-auto md:justify-start">
-        <IconSearch />
-        <span>{{ $t('Search') }}</span>
-      </BaseAction> -->
-      <!-- <MLanguageSwitch /> -->
-    </div>
-    <!--END LINK TO SEARCH & LANGUAGE SWITCH-->
-
     <!--START CONTEXT & SOCIAL NAV-->
     <div
       v-if="!activeCategory"

@@ -27,21 +27,8 @@
 </template>
 
 <script setup>
-import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
-import { watch, useStore, computed } from '@nuxtjs/composition-api'
-
-const breakpoints = useBreakpoints(breakpointsTailwind)
-const isLg = breakpoints.greater('lg')
-
+import { useStore, computed } from '@nuxtjs/composition-api'
 const store = useStore()
-const activeCategory = computed(() => store.state.ui.activeCategory)
 const isMenuVisible = computed(() => store.state.ui.isMenuVisible)
 const hasNav = computed(() => store.getters['ui/getNavObject'])
-
-// hide overlay & disable scroll-lock when switching from mobile 1st level expanded (no active category!) to desktop
-watch(isLg, isLg => {
-  if (isMenuVisible.value && isLg && !activeCategory.value) {
-    store.dispatch('ui/closeMenu')
-  }
-})
 </script>
