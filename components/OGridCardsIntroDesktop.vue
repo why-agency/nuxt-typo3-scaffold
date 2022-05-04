@@ -22,8 +22,8 @@ export default {
     }
   },
   setup() {
-      const { $CustomEase } = useContext()
-      return { $CustomEase }
+    const { $CustomEase } = useContext()
+    return { $CustomEase }
   },
   mounted() {
     this.$gsap.to(this.$refs.container, {
