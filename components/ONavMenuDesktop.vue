@@ -144,6 +144,7 @@ export default {
   },
   methods: {
     closeMenu() {
+      this.$store.dispatch('ui/resetAllCategories')
       this.isMenuVisible = false
       setTimeout(() => {
         this.$store.dispatch('ui/closeMenu')
