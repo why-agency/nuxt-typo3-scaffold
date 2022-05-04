@@ -2,7 +2,7 @@
   <section ref="wrapper">
     <div
       class="grid lg:justify-center lg:gap-x-10 2xl:gap-x-0"
-      :class="[$_gridStyle, $_theme]"
+      :class="[$_gridStyle, $_theme, $_alignment]"
     >
       <div
         class="mb-14 lg:mb-0 lg:relative"
@@ -231,6 +231,11 @@ export default {
     $_theme() {
       return {
         dark: this.appearance.background === 'bg-primary'
+      }
+    },
+    $_alignment() {
+      return {
+        'lg:items-center': !this.hasAnimation
       }
     },
     isImageHigher() {

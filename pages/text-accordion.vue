@@ -1,13 +1,11 @@
 <template>
   <div>
-    <section class="bg-primary py-20 lg:py-40">
-      <div class="frame-default">
-        <OTextAccordion v-bind="data1" />
-      </div>
-    </section>
-    <section class="frame-default space-before-default space-after-default">
+    <CeFrame v-bind="data1.appearance">
+      <OTextAccordion v-bind="data1" />
+    </CeFrame>
+    <CeFrame v-bind="data2.appearance">
       <OTextAccordion v-bind="data2" />
-    </section>
+    </CeFrame>
   </div>
 </template>
 
@@ -17,7 +15,8 @@ export default {
     return {
       data1: {
         appearance: {
-          background: 'bg-primary'
+          background: 'bg-primary',
+          frameClass: 'small'
         },
         header: {
           text: 'Accordion with background',
@@ -116,6 +115,9 @@ export default {
         ]
       },
       data2: {
+        appearance: {
+          frameClass: 'small'
+        },
         header: {
           text: 'Accordion without background',
           layout: 1,
