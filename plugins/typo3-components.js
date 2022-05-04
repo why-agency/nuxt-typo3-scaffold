@@ -1,6 +1,6 @@
 import Vue from 'vue'
 
-import OTextMulticolumn from '@/components/OTextMulticolumn'
+import OTextMulticolumn from '@/components/organisms/o-03-01-TextMulticolumn'
 import OTextMedia from '@/components/OTextMedia'
 import OSliderCard from '@/components/OSliderCard'
 import OTabBase from '@/components/OTextAccordion'

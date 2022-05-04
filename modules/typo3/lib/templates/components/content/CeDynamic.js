@@ -1,27 +1,70 @@
-import {
-  removeMetaPrefix
-} from '../../../utils/component-matching'
+import { removeMetaPrefix } from '../../../utils/component-matching'
+
+/**
+ *
+ * Typo3 plugins ussually have two variants, one for the list view, one for the detail view.
+ * Here, we check which variant should be rendered,
+ *
+ * @param {string} type
+ * @param {array} plugins
+ * @param {object} data
+ * @returns object
+ */
+const getPluginToRender = ({ type, plugins, data }) => {
+  const pluginToRender = plugins.find(plugin => plugin.type === type)
+
+  const pluginVariant = pluginToRender.variants.find(
+    variant => variant.context === data.context.action
+  )
+
+  return {
+    elementTag: pluginVariant.component,
+    componentName: pluginVariant.component
+  }
+}
+/**
+ * Content elements are registered including meta data such as the element id.
+ * In order to match the content element with the respective Vue component, we
+ * remove any meta data.
+ *
+ * @param {string} type
+ * @returns Object
+ */
+const getContentElementToRender = ({ type }) => {
+  const typeWithoutMetaPrefix = removeMetaPrefix(type)
+  const typeNameCamelCase = typeWithoutMetaPrefix.replace(
+    /_([a-z4])/g,
+    g => {
+      return g[1].toUpperCase()
+    }
+  )
+
+  return {
+    elementTag: typeWithoutMetaPrefix.replace(/_/g, '-'),
+    componentName:
+      typeNameCamelCase[0].toUpperCase() + typeNameCamelCase.slice(1)
+  }
+}
+
+const getComponentToRender = ({ type, plugins, data }) => {
+  const isPlugin = plugins.some(plugin => plugin.type === type)
+
+  return isPlugin
+    ? getPluginToRender({ type, plugins, data })
+    : getContentElementToRender({ type })
+}
 
 // Component to render CE based on type
 export default {
   props: {
-    /**
-     * Content elements data props
-     */
     data: {
       type: Object,
       required: true
     },
-    /**
-     * type of content element
-     */
     type: {
       type: String,
       default: 'text'
     },
-    /**
-     * index of content element
-     */
     index: {
       type: Number,
       default: -1
@@ -29,26 +72,20 @@ export default {
   },
   render(createElement) {
     const createComponent = () => {
-      // Content elements are registered including meta data such as the element id
-      // In order to match the content element with the respective Vue component, we
-      // remove any meta data
-      const typeWithoutMetaPrefix = removeMetaPrefix(this.type)
-      const typeNameCamelCase = typeWithoutMetaPrefix.replace(
-        /_([a-z])/g,
-        g => {
-          return g[1].toUpperCase()
-        }
-      )
+      const plugins = this.$nuxt.$typo3?.options?.plugins || []
+      const { elementTag, componentName } = getComponentToRender({
+        type: this.type,
+        plugins,
+        data: this.data
+      })
 
-      let elementTag = typeWithoutMetaPrefix.replace(/_/g, '-')
-      const componentName =
-        typeNameCamelCase[0].toUpperCase() + typeNameCamelCase.slice(1)
+      console.log(elementTag, componentName, this.$nuxt.$options.components)
 
-      if (!this.$nuxt.$options.components[componentName]) {
-        elementTag = 'ce-default'
-      }
+      const componentToRender = this.$nuxt.$options.components[componentName]
+        ? elementTag
+        : 'ce-default'
 
-      return createElement(elementTag, {
+      return createElement(componentToRender, {
         props: {
           ...{
             id: this.data.id,
@@ -57,6 +94,9 @@ export default {
             index: this.index
           },
           ...this.data.content
+        },
+        attrs: {
+          id: `c${this.data.id}`
         }
       })
     }
