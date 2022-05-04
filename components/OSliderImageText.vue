@@ -127,6 +127,7 @@ watch(isVisible, () => {
 </script>
 
 <style lang="scss" scoped>
+/* stylelint-disable */
 ::v-deep {
   .glide__slides {
     transform: translate3d(0, 0, 0) !important;
