@@ -108,16 +108,12 @@ export default {
       this.$store.dispatch('ui/closeMenu')
     },
     setActiveCategory(category) {
-      if (this.level === 1) {
+      if (this.level !== 2) {
         this.$store.commit(`ui/SET_ACTIVE_CATEGORY`, category)
+        this.$store.commit(`ui/SET_ACTIVE_SECONDARY_CATEGORY`, null) // hide 3rd column if visible
+        return
       }
-      if (this.level === 2) {
-        this.$store.commit(`ui/SET_ACTIVE_TERTIARY_CATEGORY`, null) // hide col 2 & 3 if visible
-        this.$store.commit(`ui/SET_ACTIVE_SECONDARY_CATEGORY`, category)
-      }
-      if (this.level === 3) {
-        this.$store.commit(`ui/SET_ACTIVE_TERTIARY_CATEGORY`, category)
-      }
+      this.$store.commit(`ui/SET_ACTIVE_SECONDARY_CATEGORY`, category)
     }
   }
 }
