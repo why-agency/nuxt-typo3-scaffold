@@ -36,6 +36,7 @@
     >
       <ONavMenuDesktopColumn
         v-if="isMenuVisible"
+        ref="level1"
         :level="1"
         class="bg-white"
         :active-category="{ children: navMain }"
@@ -122,6 +123,22 @@ export default {
     }),
     ...mapState('ui', ['activeCategory', 'activeSecondaryCategory'])
   },
+  watch: {
+    isMenuVisible(isVisible) {
+      if (isVisible) {
+        this.focusNextLevel('level1')
+      }
+    },
+    activeCategory: {
+      immediate: true,
+      handler() {
+        this.focusNextLevel('level2')
+      }
+    },
+    activeSecondaryCategory() {
+      this.focusNextLevel('level3')
+    }
+  },
   mounted() {
     this.isMenuVisible = true
   },
@@ -136,6 +153,15 @@ export default {
       if (!event.target.closest('.o-nav-menu-desktop__column')) {
         this.closeMenu()
       }
+    },
+    focusNextLevel(ref) {
+      const interval = setInterval(() => {
+        const col = this.$refs[ref]?.$el
+        if (col) {
+          col.querySelector('a')?.focus()
+          clearInterval(interval)
+        }
+      }, 50)
     }
   }
 }
