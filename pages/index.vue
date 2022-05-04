@@ -33,7 +33,7 @@
             <IconArrowRightThin />
           </BaseAction>
           <BaseAction variant="text" to="/404-page">
-            404 Page
+            <BaseOverline text="Error page" />
             <IconArrowRightThin />
           </BaseAction>
         </div>

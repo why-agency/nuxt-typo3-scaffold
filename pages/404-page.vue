@@ -1,24 +1,20 @@
 <template>
-  <div>
-    <section class="frame-default space-after-default">
-      <div class="frame-default">
-        <O404Page v-bind="data1" />
-      </div>
-    </section>
-  </div>
+  <CeFrame v-bind="appearance">
+    <O404Page v-bind="data1" />
+  </CeFrame>
 </template>
 
 <script>
 export default {
   data() {
     return {
+      appearance: {
+        layout: 'default',
+        frameClass: 'default',
+        spaceBefore: '',
+        spaceAfter: ''
+      },
       data1: {
-        appearance: {
-          layout: 'default',
-          frameClass: 'default',
-          spaceBefore: '',
-          spaceAfter: ''
-        },
         overline: {
           text: 'Das hätte nicht passieren dürfen.',
           layout: 1,
