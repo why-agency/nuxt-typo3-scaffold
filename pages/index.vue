@@ -12,10 +12,13 @@
         </BaseAction>
         <BaseAction variant="text" to="/text-media">Text Media</BaseAction>
         <BaseAction variant="text" to="/main-intro-base">
-          Main Into Base
+          Main Intro Base
         </BaseAction>
         <BaseAction variant="text" to="/slider-card">Slider Card</BaseAction>
         <BaseAction variant="text" to="/tab-base">Tab</BaseAction>
+        <BaseAction variant="text" to="/slider-image-text">
+          Slider Image Text
+        </BaseAction>
       </div>
     </div>
     <div>
