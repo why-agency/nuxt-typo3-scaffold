@@ -139,7 +139,7 @@ export default {
       this.$store.dispatch('ui/resetAllCategories')
       this.isMenuVisible = false
       setTimeout(() => {
-        this.$store.commit('ui/SET_MENU_STATE', false)
+        this.$store.dispatch('ui/closeMenu')
       }, 400)
     },
     displaySearchOverlay() {
