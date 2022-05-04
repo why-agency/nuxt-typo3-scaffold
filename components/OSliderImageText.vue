@@ -47,7 +47,7 @@
               !isDeco,
             '-bottom-16 lg:bottom-8 lg:left-auto lg:right-6': isDeco
           }"
-          :isDark="isDark"
+          :is-dark="isDark"
           :go="go"
         />
       </template>

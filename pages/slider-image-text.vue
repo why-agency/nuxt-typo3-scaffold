@@ -14,6 +14,9 @@ export default {
   data() {
     return {
       data1: {
+        appearance: {
+          frameClass: 'default'
+        },
         variant: 'text-deco',
         slides: [
           {
@@ -89,7 +92,7 @@ export default {
                   },
                   cdn: {
                     publicUrl:
-                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_cultColl_01_02_ergebnis.webp',
+                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_partFrnd_auteon_img.png',
                     publicPath: '/_processed_/1/1/csm_Efaflex_400e2be4a8.jpg'
                   },
                   useCase: 'default',
@@ -154,7 +157,7 @@ export default {
                   },
                   cdn: {
                     publicUrl:
-                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_cultColl_01_02_ergebnis.webp',
+                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_partFrnd_auteon_img.png',
                     publicPath: '/_processed_/1/1/csm_Efaflex_e74811ef22.jpg'
                   },
                   useCase: 'decoration',
@@ -162,7 +165,7 @@ export default {
                 },
                 {
                   publicUrl:
-                    'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_cultColl_01_02_ergebnis.webp',
+                    'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_partFrnd_auteon_img.png',
                   properties: {
                     title: null,
                     alternative: null,
@@ -219,7 +222,7 @@ export default {
                   },
                   cdn: {
                     publicUrl:
-                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_cultColl_01_02_ergebnis.webp',
+                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_partFrnd_auteon_img.png',
                     publicPath: '/_processed_/1/1/csm_Efaflex_f378fe67ad.jpg'
                   },
                   useCase: 'mobile',
@@ -265,7 +268,7 @@ export default {
               image: [
                 {
                   publicUrl:
-                    'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_cultColl_02_02_ergebnis.webp',
+                    'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_partFrnd_auteon_img.png',
                   properties: {
                     title: null,
                     alternative: null,
@@ -322,7 +325,7 @@ export default {
                   },
                   cdn: {
                     publicUrl:
-                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_cultColl_02_02_ergebnis.webp',
+                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_partFrnd_auteon_img.png',
                     publicPath:
                       '/_processed_/6/2/csm_20190201-023_WEB-Qualitaet_02cfd5fad6.jpg'
                   },
@@ -331,7 +334,7 @@ export default {
                 },
                 {
                   publicUrl:
-                    'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_cultColl_02_02_ergebnis.webp',
+                    'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_partFrnd_auteon_img.png',
                   properties: {
                     title: null,
                     alternative: null,
@@ -390,7 +393,7 @@ export default {
                   },
                   cdn: {
                     publicUrl:
-                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_cultColl_02_02_ergebnis.webp',
+                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_partFrnd_auteon_img.png',
                     publicPath:
                       '/_processed_/6/2/csm_20190201-023_WEB-Qualitaet_0910b292bc.jpg'
                   },
@@ -399,7 +402,7 @@ export default {
                 },
                 {
                   publicUrl:
-                    'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_cultColl_02_02_ergebnis.webp',
+                    'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_partFrnd_auteon_img.png',
                   properties: {
                     title: null,
                     alternative: null,
@@ -490,6 +493,9 @@ export default {
         ]
       },
       data2: {
+        appearance: {
+          frameClass: 'full'
+        },
         variant: 'ext-overlay',
         slides: [
           {
@@ -508,7 +514,7 @@ export default {
               image: [
                 {
                   publicUrl:
-                    'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_cultColl_01_02_ergebnis.webp',
+                    'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_partFrnd_auteon_img.png',
                   properties: {
                     title: null,
                     alternative: null,
@@ -565,7 +571,7 @@ export default {
                   },
                   cdn: {
                     publicUrl:
-                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_cultColl_01_02_ergebnis.webp',
+                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_partFrnd_auteon_img.png',
                     publicPath: '/_processed_/1/1/csm_Efaflex_400e2be4a8.jpg'
                   },
                   useCase: 'default',
@@ -573,7 +579,7 @@ export default {
                 },
                 {
                   publicUrl:
-                    'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_cultColl_01_02_ergebnis.webp',
+                    'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_partFrnd_auteon_img.png',
                   properties: {
                     title: null,
                     alternative: null,
@@ -630,7 +636,7 @@ export default {
                   },
                   cdn: {
                     publicUrl:
-                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_cultColl_01_02_ergebnis.webp',
+                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_partFrnd_auteon_img.png',
                     publicPath: '/_processed_/1/1/csm_Efaflex_e74811ef22.jpg'
                   },
                   useCase: 'decoration',
@@ -638,7 +644,7 @@ export default {
                 },
                 {
                   publicUrl:
-                    'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_cultColl_01_02_ergebnis.webp',
+                    'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_partFrnd_auteon_img.png',
                   properties: {
                     title: null,
                     alternative: null,
@@ -740,7 +746,7 @@ export default {
               image: [
                 {
                   publicUrl:
-                    'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_cultColl_02_02_ergebnis.webp',
+                    'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_partFrnd_auteon_img.png',
                   properties: {
                     title: null,
                     alternative: null,
@@ -797,7 +803,7 @@ export default {
                   },
                   cdn: {
                     publicUrl:
-                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_cultColl_02_02_ergebnis.webp',
+                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_partFrnd_auteon_img.png',
                     publicPath:
                       '/_processed_/6/2/csm_20190201-023_WEB-Qualitaet_02cfd5fad6.jpg'
                   },
@@ -806,7 +812,7 @@ export default {
                 },
                 {
                   publicUrl:
-                    'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_cultColl_02_02_ergebnis.webp',
+                    'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_partFrnd_auteon_img.png',
                   properties: {
                     title: null,
                     alternative: null,
@@ -865,7 +871,7 @@ export default {
                   },
                   cdn: {
                     publicUrl:
-                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_cultColl_02_02_ergebnis.webp',
+                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_partFrnd_auteon_img.png',
                     publicPath:
                       '/_processed_/6/2/csm_20190201-023_WEB-Qualitaet_0910b292bc.jpg'
                   },
@@ -874,7 +880,7 @@ export default {
                 },
                 {
                   publicUrl:
-                    'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_cultColl_02_02_ergebnis.webp',
+                    'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_partFrnd_auteon_img.png',
                   properties: {
                     title: null,
                     alternative: null,
@@ -931,7 +937,7 @@ export default {
                   },
                   cdn: {
                     publicUrl:
-                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_cultColl_02_02_ergebnis.webp',
+                      'https://development.system.cms.typo3.why.exu.dev/fileadmin/user_upload/01__why_agency_op_partFrnd_auteon_img.png',
                     publicPath:
                       '/_processed_/6/2/csm_20190201-023_WEB-Qualitaet_c5f6df626c.jpg'
                   },
