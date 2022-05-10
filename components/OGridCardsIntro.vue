@@ -230,13 +230,7 @@ export default {
       return { src, mobileSrc, alt: image[0]?.properties.alternative }
     },
     $_textColor() {
-      if (this.formattedBackgroundImgObj && this.theme === 'dark') {
-        return 'text-white'
-      }
-      if (this.formattedBackgroundImgObj && this.theme === 'light') {
-        return 'text-black'
-      }
-      return 'text-black'
+      return this.theme === 'dark' ? 'text-white' : 'text-black'
     },
     $_containerMarginTop() {
       return this.header.text || this.subline.text || this.actions
