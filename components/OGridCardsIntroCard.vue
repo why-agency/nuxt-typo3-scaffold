@@ -4,6 +4,7 @@
     :to="to"
     tag="li"
     class="
+      invisible
       glide__slide
       flex flex-col
       bg-no-repeat

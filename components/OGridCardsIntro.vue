@@ -98,6 +98,7 @@
 
       <!-- START mobile grid -->
       <OGridCardsIntroMobile
+        ref="slider"
         :card-count="formattedCards.length"
         :theme="theme"
         class="block lg:hidden"
@@ -106,10 +107,10 @@
         <template #default="{ currentSlide }">
           <OGridCardsIntroCard
             v-for="(card, index) in formattedCards"
+            ref="card"
             v-bind="card"
             :key="`card-${index}`"
             :is-active="index === currentSlide"
-            class="o-grid-card"
           />
         </template>
       </OGridCardsIntroMobile>
@@ -120,15 +121,13 @@
         class="flex-row justify-end hidden lg:flex frame-default"
         :class="$_containerMarginTop"
       >
-        <OGridCardsIntroDesktop
-          ref="target"
-          :card-count="formattedCards.length"
-        >
+        <OGridCardsIntroDesktop ref="grid" :card-count="formattedCards.length">
           <OGridCardsIntroCard
             v-for="(card, index) in formattedCards"
+            ref="card"
             v-bind="card"
             :key="`card-${index}`"
-            class="skew-y-12 o-grid-card"
+            class="skew-y-12"
           />
         </OGridCardsIntroDesktop>
       </div>
@@ -177,9 +176,11 @@ export default {
   },
 
   setup() {
-    const target = ref(null)
-    const targetIsVisible = useIntersectionObserver({ target })
-    return { target, targetIsVisible }
+    const slider = ref(null)
+    const sliderIsVisible = useIntersectionObserver({ target: slider })
+    const grid = ref(null)
+    const gridIsVisible = useIntersectionObserver({ target: grid })
+    return { slider, sliderIsVisible, grid, gridIsVisible }
   },
   computed: {
     formattedCards() {
@@ -232,18 +233,35 @@ export default {
     }
   },
   watch: {
-    targetIsVisible(isVisible) {
+    sliderIsVisible(isVisible) {
       if (isVisible) {
-        this.$gsap.from('.o-grid-card', {
-          delay: 0.5,
-          duration: 1,
-          ease: this.$CustomEase?.create('cubic', '0, 0.01, 0, 1'),
-          opacity: 0,
-          y: 150,
-          stagger: {
-            amount: 0.4
-          }
-        })
+        const cards = this.$refs.card?.map(card => card.$el)
+        if (cards) {
+          this.$gsap.from(cards, {
+            duration: 1,
+            ease: this.$CustomEase?.create('cubic', '0, 0.01, 0, 1'),
+            opacity: 0,
+            autoAlpha: 0
+          })
+        }
+      }
+    },
+    gridIsVisible(isVisible) {
+      if (isVisible) {
+        const cards = this.$refs.card?.map(card => card.$el)
+        if (cards) {
+          this.$gsap.from(cards, {
+            delay: 0.5,
+            duration: 1,
+            ease: this.$CustomEase?.create('cubic', '0, 0.01, 0, 1'),
+            opacity: 0,
+            autoAlpha: 0,
+            y: 150,
+            stagger: {
+              amount: 0.4
+            }
+          })
+        }
       }
     }
   }
