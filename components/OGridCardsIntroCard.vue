@@ -132,6 +132,10 @@ export default {
     isActive: {
       type: Boolean,
       default: false
+    },
+    background: {
+      type: String,
+      default: 'secondary'
     }
   },
   setup(props) {
