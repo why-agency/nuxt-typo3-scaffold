@@ -62,12 +62,12 @@
     </div>
     <!-- END backround image -->
 
-    <div class="relative">
+    <div v-if="formattedCards" class="relative">
       <!-- START grid header -->
       <div class="frame-default" :class="{ dark: theme === 'dark' && image }">
         <BaseHeadline
           tag="h2"
-          class="dark:text-white md:max-w-3xl xxl:max-w-5xl"
+          class="dark:text-white md:max-w-3xl 2xl:max-w-5xl"
           :level="header.layout"
           :text="header.text"
         />
@@ -80,7 +80,7 @@
             lg:mt-12
             line-clamp-3
             md:max-w-3xl
-            xxl:max-w-5xl
+            2xl:max-w-5xl
             dark:text-white
           "
         >
@@ -118,7 +118,7 @@
 
       <!-- START desktop grid -->
       <div
-        class="flex-row justify-end hidden lg:flex frame-default"
+        class="justify-end hidden lg:flex frame-default"
         :class="$_containerMarginTop"
       >
         <OGridCardsIntroDesktop ref="grid" :card-count="formattedCards.length">
@@ -201,9 +201,6 @@ export default {
       const mobileSrc = image[1]?.cdn.publicUrl || src
 
       return { src, mobileSrc, alt: image[0]?.properties.alternative }
-    },
-    $_textColor() {
-      return this.theme === 'dark' ? 'text-white' : 'text-black'
     },
     $_containerMarginTop() {
       return this.header.text || this.subline.text || this.actions
