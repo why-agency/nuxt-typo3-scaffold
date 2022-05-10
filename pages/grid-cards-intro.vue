@@ -55,7 +55,7 @@ export default {
               image: null,
               url: {
                 type: 'page',
-                url: '/karriere/unsere-teams',
+                url: '/grid-cards-intro',
                 target: '',
                 title: '',
                 class: ''
@@ -76,7 +76,7 @@ export default {
               image: null,
               url: {
                 type: 'page',
-                url: '/karriere/kultur-benefits',
+                url: '/grid-cards-intro',
                 target: '',
                 title: '',
                 class: ''
@@ -97,7 +97,7 @@ export default {
               image: null,
               url: {
                 type: 'page',
-                url: '/karriere/bewerbung-onboarding',
+                url: '/grid-cards-intro',
                 target: '',
                 title: '',
                 class: ''
@@ -118,7 +118,7 @@ export default {
               image: null,
               url: {
                 type: 'page',
-                url: '/karriere/bewerbung-onboarding',
+                url: '/grid-cards-intro',
                 target: '',
                 title: '',
                 class: ''
@@ -139,7 +139,7 @@ export default {
               image: null,
               url: {
                 type: 'page',
-                url: '/karriere/bewerbung-onboarding',
+                url: '/grid-cards-intro',
                 target: '',
                 title: '',
                 class: ''
@@ -160,7 +160,7 @@ export default {
               image: null,
               url: {
                 type: 'page',
-                url: '/karriere/bewerbung-onboarding',
+                url: '/grid-cards-intro',
                 target: '',
                 title: '',
                 class: ''
