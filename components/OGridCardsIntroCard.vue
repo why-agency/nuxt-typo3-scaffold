@@ -96,7 +96,6 @@
 
 <script>
 import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
-import { useActionType } from '@/composables/useActionType'
 import { useBackgroundColor } from '@/composables/useBackgroundColor'
 
 export default {
@@ -139,13 +138,12 @@ export default {
     }
   },
   setup(props) {
-    const breakpoints = useBreakpoints({ ...breakpointsTailwind, '4xl': 1920 })
+    const breakpoints = useBreakpoints(breakpointsTailwind)
     const isMd = breakpoints.greater('md')
     const isXl = breakpoints.greater('xl')
 
-    const { isAnchor, type } = useActionType(props.url)
     const backgroundColor = useBackgroundColor(props.background)
-    return { isMd, isXl, isAnchor, type, backgroundColor }
+    return { isMd, isXl, backgroundColor }
   },
   data() {
     return {
