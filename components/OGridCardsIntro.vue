@@ -138,7 +138,7 @@
 </template>
 
 <script>
-import { ref, useContext } from '@nuxtjs/composition-api'
+import { ref } from '@nuxtjs/composition-api'
 import { useIntersectionObserver } from '@/composables/useIntersectionObserver'
 export default {
   props: {
@@ -178,9 +178,8 @@ export default {
 
   setup() {
     const target = ref(null)
-    const { $CustomEase } = useContext()
     const targetIsVisible = useIntersectionObserver({ target })
-    return { target, targetIsVisible, $CustomEase }
+    return { target, targetIsVisible }
   },
   computed: {
     formattedCards() {

@@ -13,17 +13,12 @@
 </template>
 
 <script>
-import { useContext } from '@nuxtjs/composition-api'
 export default {
   props: {
     cardCount: {
       type: Number,
       default: 4
     }
-  },
-  setup() {
-    const { $CustomEase } = useContext()
-    return { $CustomEase }
   },
   mounted() {
     this.$gsap.to(this.$refs.container, {
