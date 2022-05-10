@@ -139,11 +139,11 @@ export default {
   },
   setup(props) {
     const breakpoints = useBreakpoints(breakpointsTailwind)
-    const isMd = breakpoints.greater('md')
+    const isLg = breakpoints.greater('lg')
     const isXl = breakpoints.greater('xl')
 
     const backgroundColor = useBackgroundColor(props.background)
-    return { isMd, isXl, backgroundColor }
+    return { isLg, isXl, backgroundColor }
   },
   data() {
     return {
@@ -152,7 +152,7 @@ export default {
   },
   computed: {
     leftPositioning() {
-      const characterCount = this.headline.length
+      const characterCount = this.headline?.length
       if (characterCount <= 19) {
         return 'left-10 md:left-0 xl:left-[-3rem] 3xl:left-0'
       }
@@ -182,7 +182,7 @@ export default {
 
   watch: {
     isActive(value) {
-      value && !this.isMd ? (this.isSelected = true) : (this.isSelected = false)
+      this.isSelected = value && !this.isLg
     },
 
     isSelected(value) {
@@ -203,18 +203,16 @@ export default {
     }
   },
   mounted() {
-    this.isActive && !this.isMd
-      ? (this.isSelected = true)
-      : (this.isSelected = false)
+    this.isSelected = this.isActive && !this.isLg
   },
   methods: {
     onMouseEnter() {
-      if (this.isMd) {
+      if (this.isLg) {
         this.isSelected = true
       }
     },
     onMouseLeave() {
-      if (this.isMd) {
+      if (this.isLg) {
         this.isSelected = false
       }
     }
