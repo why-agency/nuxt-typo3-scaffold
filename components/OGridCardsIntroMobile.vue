@@ -36,9 +36,7 @@ export default {
         swipeThreshold: this.cardCount > 1 ? 80 : false,
         dragThreshold: this.cardCount > 1 ? 120 : false,
         controls: false,
-        sizes: {
-          slideWidth: 200
-        },
+        slideWidth: { desktop: 260, mobile: 260 },
         perTouch: 1,
         gap: 24,
         peek: { before: 0, after: 50 },
@@ -95,10 +93,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-/* stylelint-disable */
-::v-deep .glide__slides {
-  min-width: 2416px;
-}
-</style>

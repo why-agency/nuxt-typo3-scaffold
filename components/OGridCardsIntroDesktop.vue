@@ -1,7 +1,7 @@
 <template>
   <ul
     ref="container"
-    class="pb-10 grid -skew-y-12 gap-12 xxl:gap-24"
+    class="pb-10 grid -skew-y-12 gap-12 2xl:gap-24"
     :class="{
       'grid-cols-1': cardCount === 1,
       'grid-cols-2': cardCount === 2 || cardCount === 4,

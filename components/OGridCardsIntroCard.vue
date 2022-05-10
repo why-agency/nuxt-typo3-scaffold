@@ -10,9 +10,8 @@
       m-4
       lg:m-0
       relative
-      min-h-[340px] min-w-[244px]
-      max-w-[244px]
-      xxl:min-h-[480px] xxl:min-w-[345px] xxl:max-w-[345px]
+      min-h-[340px]
+      lg:min-h-[480px] lg:!w-[345px]
       before:absolute
       before:content-['']
       before:inset-[-8px]
@@ -156,12 +155,12 @@ export default {
     leftPositioning() {
       const characterCount = this.headline.length
       if (characterCount <= 19) {
-        return 'left-10 md:left-0 xl:left-[-3rem] xxxl:left-0'
+        return 'left-10 md:left-0 xl:left-[-3rem] 3xl:left-0'
       }
       if (characterCount <= 25) {
-        return 'left-[3rem] md:left-[2rem] xl:left-[-4rem] xxxl:left-0'
+        return 'left-[3rem] md:left-[2rem] xl:left-[-4rem] 3xl:left-0'
       }
-      return 'left-[2rem] md:left-[1rem] xl:left-[-1rem] xxxl:left-0'
+      return 'left-[2rem] md:left-[1rem] xl:left-[-1rem] 3xl:left-0'
     },
 
     textColor() {
