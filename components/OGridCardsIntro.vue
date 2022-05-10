@@ -184,33 +184,12 @@ export default {
   },
   computed: {
     formattedCards() {
-      if (this.cards && this.cards.length > 0) {
-        return this.cards.map(card => {
-          const {
-            color,
-            headline,
-            image,
-            subline,
-            text,
-            url,
-            variant,
-            overlays
-          } = card.content
-          const imageUrl = image ? image[0].cdn.publicUrl : null
-          return {
-            color,
-            headline,
-            imageUrl,
-            subline,
-            text,
-            url,
-            variant,
-            overlays,
-            id: card.id
-          }
-        })
-      }
-      return []
+      return this.cards?.map(card => ({
+        ...card.content,
+        imageUrl: card.content?.image?.[0]?.cdn?.publicUrl,
+        id: card.content?.id
+        // TODO: headline layout prop should be removed from the API
+      }))
     },
     backgroundImage() {
       if (!this.image || !this.image.length) {
