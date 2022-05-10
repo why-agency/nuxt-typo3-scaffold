@@ -139,7 +139,7 @@
 
 <script>
 import { ref, useContext } from '@nuxtjs/composition-api'
-import { useIntersectionObserver } from '@vueuse/core'
+import { useIntersectionObserver } from '@/composables/useIntersectionObserver'
 export default {
   props: {
     actions: {
@@ -178,14 +178,8 @@ export default {
 
   setup() {
     const target = ref(null)
-    const targetIsVisible = ref(false)
     const { $CustomEase } = useContext()
-    const { stop } = useIntersectionObserver(target, ([{ isIntersecting }]) => {
-      if (isIntersecting) {
-        stop()
-      }
-      targetIsVisible.value = isIntersecting
-    })
+    const targetIsVisible = useIntersectionObserver({ target })
     return { target, targetIsVisible, $CustomEase }
   },
   computed: {
