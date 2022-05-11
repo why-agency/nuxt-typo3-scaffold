@@ -1,37 +1,33 @@
 <template>
   <div
-    class="flex items-center w-max lg:justify-center space-x-2"
-    :class="{ dark: theme === 'dark' }"
+    class="flex h-10 items-center absolute lg:bottom-20 text-body4 invisible"
   >
-    <!-- START numeric counter -->
+    <span v-if="withSlideList" class="dark:text-white">01</span>
     <div
-      v-if="numeric && _slides >= numericCount"
-      class="flex items-center font-semibold dark:text-white"
+      v-if="withSlideList"
+      class="w-max flex items-center lg:justify-center px-6 lg:px-10 space-x-2"
     >
-      {{ currentSlideText }}
-      <span
-        class="block mx-2 h-6 w-0.5 bg-black dark:bg-white transform -skew-x-12"
-      />
-      {{ slideCounterText }}
-    </div>
-    <!-- END numeric counter -->
-
-    <!-- START bullets -->
-    <div v-else class="flex items-center h-6 space-x-2">
       <button
         v-for="(slide, index) in slides"
         :key="slide.id"
-        class="transition-all focus:outline-none"
+        class="h-0.5 w-8 transition-all"
         :class="[
-          currentSlide === index
-            ? 'bg-black dark:bg-secondary w-16 h-1'
-            : 'bg-gray-300  w-8 h-0.5'
+          index === currentSlide
+            ? 'dark:bg-white bg-primary h-1'
+            : 'dark:bg-white bg-gray-500'
         ]"
         :aria-label="`Go to slide ${index + 1}`"
         @click="$emit('slide-updated', `=${index}`)"
       />
     </div>
-    <!-- END bullets -->
+    <div v-else class="flex">
+      <span class="text-body3 dark:text-white">
+        {{ currentSlide + 1 }}/{{ slideCount }}
+      </span>
+    </div>
+    <span v-if="withSlideList" class="dark:text-white">
+      {{ slideCount > 9 ? slideCount : `0${slideCount}` }}
+    </span>
   </div>
 </template>
 
@@ -39,49 +35,21 @@
 export default {
   props: {
     slides: {
-      type: [Number, Array],
+      type: [Array, Number],
       required: true
     },
     currentSlide: {
       type: Number,
       default: 0
     },
-    theme: {
-      type: String,
-      default: 'dark'
-    },
-    numeric: {
+    withSlideList: {
       type: Boolean,
       default: true
-    },
-    numericCount: {
-      type: Number,
-      default: 5
     }
   },
   computed: {
-    _slides() {
-      return Array.isArray(this.slides) ? this.slides.length : this.slides
-    },
-    currentSlideText() {
-      const slide = this.currentSlide + 1
-      return slide < 10 ? '0' + slide : slide
-    },
-    slideCounterText() {
-      return this._slides < 10 ? '0' + this._slides : this._slides
-    }
-  },
-  methods: {
-    $_bulletStylings(index) {
-      if (this.theme === 'dark') {
-        return index === this.currentSlide
-          ? 'bg-secondary w-16 h-1'
-          : 'bg-gray-300  w-8'
-      }
-
-      return index === this.currentSlide
-        ? 'bg-black w-16 h-1'
-        : 'bg-gray-500 w-8'
+    slideCount() {
+      return this.slides.length || this.slides
     }
   }
 }

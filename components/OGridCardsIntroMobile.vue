@@ -5,8 +5,7 @@
       <OCarouselBullets
         :slides="cardCount"
         :current-slide="currentSlide"
-        class="mt-6 ml-6"
-        :theme="theme"
+        class="mt-6 ml-6 !static !visible"
         @slide-updated="go"
       />
     </template>
