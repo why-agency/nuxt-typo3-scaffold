@@ -1,7 +1,15 @@
 <template>
   <div
     ref="target"
-    class="group relative px-0 overline3 items-center hover:text-black focus-visible:ring"
+    class="
+      group
+      relative
+      px-0
+      overline3
+      items-center
+      hover:text-black
+      focus-visible:ring
+    "
     :class="$_color"
     @blur.capture="handleBlur"
   >
@@ -106,8 +114,7 @@
         z-10
         w-full
         px-0
-        overflow-y-scroll
-        overflow-x-scroll
+        overflow-y-scroll overflow-x-scroll
         text-lg
         max-h-40
         focus:outline-none
@@ -147,14 +154,13 @@
           active:bg-white
           text-black
           w-full
-          focus:outline-none focus-visible:ring-2 focus-visible:bg-white
-          
+          focus:outline-none
+          focus-visible:ring-2 focus-visible:bg-white
         "
-       
         @click="handleSelect(option)"
       >
         <slot name="option" :value="option">
-          <div class="flex relative left-2.5 items-center h-8 ">
+          <div class="flex relative left-2.5 items-center h-8">
             {{ option.label || option }}
             <IconCheck
               v-show="selected == option"
