@@ -80,6 +80,7 @@ export default {
     '@/modules/typo3',
     'nuxt-i18n',
     '@nuxtjs/gtm',
+    'nuxt-uid-module',
     'portal-vue/nuxt'
   ],
 

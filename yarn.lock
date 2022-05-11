@@ -7608,6 +7608,13 @@ nuxt-i18n@6.28.1:
     ufo "^0.7.7"
     vue-i18n "^8.25.0"
 
+nuxt-uid-module@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/nuxt-uid-module/-/nuxt-uid-module-0.2.0.tgz#18fdc6ccdddc98de36e203a4b2bb24f9680e3cb8"
+  integrity sha512-EqEJH0BK7jrIxrSuR9Skfppx3OI8h59xmUQZ/iQruv8MK0soS8eiNBSmGpfHj+vpEuwEDGKwKM9l9Ed+EqdjFQ==
+  dependencies:
+    vue-uid "^0.4.0"
+
 nuxt@2.15.8:
   version "2.15.8"
   resolved "https://registry.npmjs.org/nuxt/-/nuxt-2.15.8.tgz"
@@ -11196,6 +11203,11 @@ vue-template-es2015-compiler@^1.9.0:
   version "1.9.1"
   resolved "https://registry.npmjs.org/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
+
+vue-uid@^0.4.0:
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/vue-uid/-/vue-uid-0.4.5.tgz#7e44ff7669c6043e19e32e9fc6caea0ad3f8be15"
+  integrity sha512-Rtb2MLRDkPM5VEmYSDcH2oSmcoGsQ/YQDya1j1TlaJyK5MMZntjfQtlNOyTp7yPIWkwVfPBUb19FyQ//ytNHxw==
 
 vue@^2.6.12:
   version "2.6.14"

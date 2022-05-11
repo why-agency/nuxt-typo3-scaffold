@@ -79,8 +79,8 @@
             focus:ring-offset-0
             group-hover:text-black
             text-form-value
+            px-10
           "
-          style="padding-left: 40px"
         >
           {{ selected.label || selected || placeholder }}
         </p>
@@ -95,7 +95,7 @@
             w-10
             items-center
             padding-left:
-            30px
+            pl-8
             group-hover:text-black
           "
         >
@@ -135,7 +135,15 @@
     >
       <li
         v-if="placeholder && selected"
-        class="py-3 pl-3 text-gray-500 hover:text-gray-300 flex left-3"
+        class="
+          items-center
+          h-8
+          pl-3
+          text-gray-500
+          hover:text-gray-300
+          flex
+          left-3
+        "
         @click="handleSelect('')"
       >
         {{ placeholder }}
@@ -154,9 +162,10 @@
           active:bg-white
           text-black
           w-full
-          focus:outline-none
-          focus-visible:ring-2 focus-visible:bg-white
         "
+        :class="{
+          '!bg-white': index === focused
+        }"
         @click="handleSelect(option)"
       >
         <slot name="option" :value="option">
