@@ -89,6 +89,9 @@
         dark:text-white
       "
     />
+    <BaseDropdown placeholder="Label" :options="options">
+      <template #iconPrefix><IconSearch /></template>
+    </BaseDropdown>
 
     <BaseCheckbox id="test" v-model="test">Label</BaseCheckbox>
 
@@ -135,6 +138,32 @@ export default {
         layout: 1,
         text: "this is the baseSubline component and it's great"
       },
+      options: [
+        {
+          id: 1,
+          label: 'Option 1'
+        },
+        {
+          id: 2,
+          label: 'Option 2'
+        },
+        {
+          id: 3,
+          label: 'Option 3'
+        },
+        {
+          id: 4,
+          label: 'Option 4'
+        },
+        {
+          id: 5,
+          label: 'Option 5'
+        },
+        {
+          id: 6,
+          label: 'Option 6'
+        }
+      ],
       test: false,
       actions: [
         {
