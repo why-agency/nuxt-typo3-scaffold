@@ -77,6 +77,10 @@
 
     <BaseCheckbox id="test" v-model="test">Label</BaseCheckbox>
 
+    <BaseTextField label="">
+      <template #iconPrefix><IconChevronLeftFat /></template>
+    </BaseTextField>
+
     <div class="">
       <BaseButtonIcon to="/" variant="filled" color="black">
         <IconArrowRightMedium />
