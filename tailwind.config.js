@@ -105,6 +105,34 @@ module.exports = {
           letterSpacing: '1.4px'
         }
       ],
+      quote1: [
+        '5rem',
+        {
+          lineHeight: '100%',
+          letterSpacing: '1.92px'
+        }
+      ],
+      'quote1-mobile': [
+        '3rem',
+        {
+          lineHeight: '105%',
+          letterSpacing: '1.12px'
+        }
+      ],
+      quote2: [
+        '3.5rem',
+        {
+          lineHeight: '100%',
+          letterSpacing: '1.36px'
+        }
+      ],
+      'quote2-mobile': [
+        '2.125rem',
+        {
+          lineHeight: '100%',
+          letterSpacing: '0.8px'
+        }
+      ],
 
       nav: [
         '1rem',
