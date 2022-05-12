@@ -36,6 +36,10 @@
             <BaseOverline text="Error page" />
             <IconArrowRightThin />
           </BaseAction>
+          <BaseAction variant="text" to="/quote">
+            <BaseOverline text="Quote" />
+            <IconArrowRightThin />
+          </BaseAction>
         </div>
       </BaseReveal>
     </div>
