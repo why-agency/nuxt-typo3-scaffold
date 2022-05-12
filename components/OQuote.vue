@@ -18,7 +18,18 @@
     <div
       v-if="sourcename"
       ref="source"
-      class="self-end invisible mt-12 xl:row-start-2 xl:col-start-2 justify-self-end text-body1-mobile xl:text-body1 leading-7 w-36 xl:w-48 xl:-mt-10"
+      class="
+        self-end
+        invisible
+        mt-12
+        xl:row-start-2 xl:col-start-2
+        justify-self-end
+        text-body1-mobile
+        xl:text-body1
+        leading-7
+        w-36
+        xl:w-48 xl:-mt-10
+      "
     >
       <div v-if="sourcename" class="font-bold">{{ sourcename }}</div>
       <div v-if="sourceposition">{{ sourceposition }}</div>

@@ -87,10 +87,8 @@ export default {
         'font-primary text-h4': this.layout === 4,
         'font-primary text-h5': this.layout === 5,
         'font-primary text-h6': this.layout === 6,
-        'font-secondary text-quote1-mobile xl:text-quote1':
-          this.layout === 11,
-        'font-secondary text-quote2-mobile xl:text-quote2':
-          this.layout === 12
+        'font-secondary text-quote1-mobile xl:text-quote1': this.layout === 11,
+        'font-secondary text-quote2-mobile xl:text-quote2': this.layout === 12
       }
     }
   },
