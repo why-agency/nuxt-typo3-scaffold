@@ -1,13 +1,13 @@
 import Vue from 'vue'
 
-import OTextMulticolumn from '@/components/organisms/o-03-01-TextMulticolumn'
-import OTextMedia from '@/components/OTextMedia'
-import OSliderCard from '@/components/OSliderCard'
-import OTabBase from '@/components/OTextAccordion'
+import OTextMultiColumn from '@/components/organisms/o-03-01-TextMultiColumn'
+import OTextMedia from '@/components/organisms/o-03-02-TextMedia'
+import OSliderCard from '@/components/organisms/o-04-01-SliderCards'
+import OTabBase from '@/components/organisms/o-03-04-TextAccordion'
 import OGridCardsIntro from '@/components/OGridCardsIntro'
 
 const components = {
-  OTextMulticolumn,
+  OTextMultiColumn,
   OTextMedia,
   OTabBase,
   OSliderCard,

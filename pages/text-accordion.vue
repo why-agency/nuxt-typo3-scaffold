@@ -1,10 +1,10 @@
 <template>
   <div>
     <CeFrame v-bind="data1.appearance">
-      <OTextAccordion v-bind="data1" />
+      <o-03-04-TextAccordion v-bind="data1" />
     </CeFrame>
     <CeFrame v-bind="data2.appearance">
-      <OTextAccordion v-bind="data2" />
+      <o-03-04-TextAccordion v-bind="data2" />
     </CeFrame>
   </div>
 </template>

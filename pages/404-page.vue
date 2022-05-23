@@ -1,6 +1,6 @@
 <template>
   <CeFrame v-bind="appearance">
-    <O404Page v-bind="data1" />
+    <o-07-01-error-page v-bind="data1" />
   </CeFrame>
 </template>
 

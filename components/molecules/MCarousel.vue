@@ -33,7 +33,7 @@
 import Glide from '@glidejs/glide'
 import '@glidejs/glide/dist/css/glide.core.min.css'
 import { useBreakpoints } from '@vueuse/core'
-import Sizes from '../../../utils/sizes'
+import Sizes from '@/utils/sizes'
 
 const events = [
   'build.after',

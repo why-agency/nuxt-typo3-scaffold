@@ -1,13 +1,13 @@
 <template>
   <div>
     <CeFrame v-bind="data1.appearance">
-      <OTextMulticolumn v-bind="data1" />
+      <o-03-01-TextMultiColumn v-bind="data1" />
     </CeFrame>
     <CeFrame v-bind="data2.appearance">
-      <OTextMulticolumn v-bind="data2" />
+      <o-03-01-TextMultiColumn v-bind="data2" />
     </CeFrame>
     <CeFrame v-bind="data3.appearance">
-      <OTextMulticolumn v-bind="data3" />
+      <o-03-01-TextMultiColumn v-bind="data3" />
     </CeFrame>
   </div>
 </template>

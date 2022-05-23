@@ -4,7 +4,7 @@
       <BaseHeadline v-if="header.text" v-bind="header" class="mb-6 lg:mb-12" />
       <MActionBar v-if="actions" :actions="actions" position="left" />
       <ul class="flex flex-col mt-6 lg:mt-24">
-        <OTextAccordionTab
+        <o-03-04-TextAccordionTab
           v-for="tab in formattedTabs"
           :key="tab.id"
           v-bind="tab"

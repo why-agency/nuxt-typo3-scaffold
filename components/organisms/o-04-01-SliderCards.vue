@@ -80,7 +80,7 @@
           : 'xl:pl-24'
       ]"
     >
-      <OCarousel
+      <MCarousel
         v-bind="settings"
         class="max-w-[100vw] ml-6"
         @change="onChange"
@@ -95,7 +95,7 @@
         />
         <template #bullets="{ go, slidesCount }">
           <portal :to="`${id}-bullets`">
-            <OCarouselBullets
+            <MCarouselBullets
               class="!visible !static"
               :slides="slidesCount"
               :current-slide="currentSlide"
@@ -106,10 +106,10 @@
         </template>
         <template #controls="{ go }">
           <portal :to="`${id}-controls`">
-            <OCarouselControls class="!visible !static" :go="go" />
+            <MCarouselControls class="!visible !static" :go="go" />
           </portal>
         </template>
-      </OCarousel>
+      </MCarousel>
       <div
         ref="controls"
         class="
