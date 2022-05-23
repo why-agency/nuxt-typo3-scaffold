@@ -1,10 +1,10 @@
 <template>
   <div>
     <CeFrame>
-      <OTabBase v-bind="data1" />
+      <o-03-05-TextTab v-bind="data1" />
     </CeFrame>
     <CeFrame>
-      <OTabBase v-bind="data2" />
+      <o-03-05-TextTab v-bind="data2" />
     </CeFrame>
   </div>
 </template>

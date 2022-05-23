@@ -1,6 +1,6 @@
 <template>
   <section ref="target" :class="{ '-mx-6 xl:mx-auto mb-20 lg:mb-0': isDeco }">
-    <OCarousel
+    <MCarousel
       v-bind="settings"
       :bullets="true"
       class="relative"
@@ -25,7 +25,7 @@
         />
       </template>
       <template v-if="isSlider" #bullets="{ go, slidesCount }">
-        <OCarouselBullets
+        <MCarouselBullets
           ref="bullets"
           :slides="slidesCount"
           :current-slide="currentSlide"
@@ -40,7 +40,7 @@
         />
       </template>
       <template v-if="isSlider" #controls="{ go }">
-        <OCarouselControls
+        <MCarouselControls
           ref="controls"
           :class="{
             'bottom-6 frame-default xl:w-full xl:left-1/2 xl:transform xl:-translate-x-1/2':
@@ -51,7 +51,7 @@
           :go="go"
         />
       </template>
-    </OCarousel>
+    </MCarousel>
   </section>
 </template>
 
@@ -59,7 +59,7 @@
 import { gsap } from 'gsap'
 import { ref, computed, watch } from '@nuxtjs/composition-api'
 import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
-import { useIntersectionObserver } from '../composables/useIntersectionObserver'
+import { useIntersectionObserver } from '@/composables/useIntersectionObserver'
 
 /** breakpoints */
 const breakpoints = useBreakpoints(breakpointsTailwind)

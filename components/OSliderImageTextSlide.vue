@@ -91,7 +91,7 @@
 <script>
 import { ref } from '@nuxtjs/composition-api'
 import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
-import { useIntersectionObserver } from '../composables/useIntersectionObserver'
+import { useIntersectionObserver } from '@/composables/useIntersectionObserver'
 
 export default {
   props: {

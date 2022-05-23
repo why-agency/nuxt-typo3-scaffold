@@ -39,7 +39,7 @@
         aria-hidden="true"
       />
     </div>
-    <OTabTabbar
+    <o-03-05-TextTabBar
       ref="tabbar"
       :tabs="formattedTabs"
       :is-large="isLarge"
@@ -47,7 +47,7 @@
       @tab-clicked="onTabClicked"
     >
       <template #mobileTabContent>
-        <OTabContent
+        <o-03-05-TextTabContent
           v-if="activeTab"
           :tab="activeTab"
           :has-image="hasImage"
@@ -55,8 +55,8 @@
           class="lg:hidden"
         />
       </template>
-    </OTabTabbar>
-    <OTabContent
+    </o-03-05-TextTabBar>
+    <o-03-05-TextTabContent
       v-if="activeTab"
       ref="textWrapper"
       :tab="activeTab"
@@ -68,7 +68,7 @@
 <script setup>
 import { ref, computed, watch, useContext } from '@nuxtjs/composition-api'
 import { gsap } from 'gsap'
-import { useIntersectionObserver } from '../composables/useIntersectionObserver'
+import { useIntersectionObserver } from '@/composables/useIntersectionObserver'
 
 /** props */
 const props = defineProps({

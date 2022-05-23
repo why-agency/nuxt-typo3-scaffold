@@ -31,7 +31,7 @@
             class="absolute bottom-4 right-4"
             @click="openVideoPortal"
           >
-            <IconVideoPlayFilled />
+            <IconVideoPlay />
           </BaseButtonIcon>
         </div>
       </div>

@@ -54,11 +54,18 @@ export default {
   plugins: [
     '@/plugins/i18n',
     '@/plugins/strip-html',
-    '@/plugins/scroll-lock.client'
+    '@/plugins/scroll-lock.client',
+    '@/plugins/typo3-components'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: [
+    '~/components',
+    '~/components/organisms',
+    '~/components/molecules',
+    { path: '~/components/icons', prefix: 'icon' },
+    { path: '~/components/base', pathPrefix: false, prefix: 'base' }
+  ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [

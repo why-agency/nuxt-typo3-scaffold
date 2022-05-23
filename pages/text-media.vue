@@ -1,20 +1,22 @@
 <template>
   <div>
     <CeFrame v-bind="dataImage.appearance">
-      <OTextMedia v-bind="dataImage" />
+      <o-03-02-TextMedia v-bind="dataImage" />
     </CeFrame>
     <CeFrame>
-      <OTextMedia v-bind="dataUploadVideo" />
+      <o-03-02-TextMedia v-bind="dataUploadVideo" />
     </CeFrame>
     <CeFrame>
-      <OTextMedia v-bind="dataStreamVideo" />
+      <o-03-02-TextMedia v-bind="dataStreamVideo" />
     </CeFrame>
     <portal-target name="video-lightbox"></portal-target>
   </div>
 </template>
 
 <script>
+import o0302TextMedia from '~/components/organisms/o-03-02-TextMedia.vue'
 export default {
+  components: { o0302TextMedia },
   data() {
     return {
       dataImage: {
