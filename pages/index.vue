@@ -36,6 +36,10 @@
             <BaseOverline text="Error page" />
             <IconArrowRightThin />
           </BaseAction>
+          <BaseAction variant="text" to="/locationoverview">
+            <OLocationOverview text="Error page" />
+            <IconArrowRightThin />
+          </BaseAction>
         </div>
       </BaseReveal>
     </div>
