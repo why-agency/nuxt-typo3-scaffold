@@ -32,7 +32,8 @@ export default {
     cmsEndpoint: process.env.TYPO3_API,
     gtm: {
       id: process.env.GOOGLE_TAG_MANAGER_ID
-    }
+    },
+    googleMapsApiKey: process.env.GMAPS_API_KEY
   },
 
   /*
@@ -85,6 +86,7 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@/modules/typo3',
+    '~/modules/integrations.js',
     'nuxt-i18n',
     '@nuxtjs/gtm',
     'nuxt-uid-module',
