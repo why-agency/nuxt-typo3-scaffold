@@ -12,7 +12,6 @@ export default {
           zoom: 5,
           disableDefaultUI: true
         },
-        isDragged: false,
         markerData: [
           {
             id: 1,
