@@ -36,6 +36,10 @@
             <BaseOverline text="Error page" />
             <IconArrowRightThin />
           </BaseAction>
+          <BaseAction variant="text" to="/map">
+            <BaseOverline text="Google Map" />
+            <IconArrowRightThin />
+          </BaseAction>
           
         </div>
       </BaseReveal>

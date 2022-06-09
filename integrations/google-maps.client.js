@@ -33,7 +33,8 @@ const init = ({ apiKey }) => {
 }
 
 export default ({ $config }, inject) => {
-  const apiKey = $config.googleMapsApiKey
+  const apiKey =
+    $config.googleMapsApiKey || 'AIzaSyD67ePlRX2Kmto-31Iu1c_XqmSKx66oOH4'
 
   inject('googleMaps', {
     loadApi() {

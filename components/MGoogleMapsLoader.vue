@@ -34,6 +34,7 @@ export default {
       if (this.map && this.map.getZoom) {
         return this.map.getZoom()
       }
+
       return 5
     }
   },
@@ -53,6 +54,7 @@ export default {
     initializeMap() {
       const mapContainer = this.$refs.map
       this.map = new this.google.maps.Map(mapContainer, this.mapConfig)
+
       if (this.map && this.map.addListener) {
         this.map.addListener('drag', () => {
           this.$emit('drag')
@@ -69,6 +71,7 @@ export default {
       if (!this.google || !this.map) {
         return []
       }
+
       this.markers = this.markerData.map(marker => {
         const markerReference = new this.google.maps.Marker({
           position: marker.position,
@@ -76,12 +79,14 @@ export default {
           map: this.map,
           icon: marker.icon
         })
+
         this.addListeners(marker, markerReference)
+
         return markerReference
       })
     },
     addListeners(marker, markerReference) {
-      marker.listeners.forEach(listener => {
+      marker?.listeners?.forEach(listener => {
         if (markerReference && markerReference.addListener) {
           markerReference.addListener(listener.event, () => {
             call(listener.callback, listener.params)
