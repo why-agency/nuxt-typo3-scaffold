@@ -40,7 +40,6 @@
             <BaseOverline text="Google Map" />
             <IconArrowRightThin />
           </BaseAction>
-          
         </div>
       </BaseReveal>
     </div>
