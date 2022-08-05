@@ -3,11 +3,11 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   mode: 'jit',
-  purge: ['./**/*.vue', './composables/*.js'],
+  content: ['./**/*.vue', './composables/*.js'],
   darkMode: 'class',
   theme: {
     colors: {
-      gray: colors.trueGray,
+      gray: colors.neutral,
       primary: {
         DEFAULT: '#1D2F2F',
         hover: '#4D7D7D',

@@ -106,7 +106,7 @@ export default {
                 position: 'left'
               },
               bodytext: {
-                text: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis auctor elit sed vulputate mi. Diam phasellus vestibulum lorem sed risus ultricies. Eget arcu dictum varius duis at consectetur lorem donec massa. Senectus et netus et malesuada. Non diam phasellus vestibulum lorem sed risus ultricies tristique nulla. Nec nam aliquam sem et tortor consequat id porta. Orci a scelerisque purus semper eget duis at. Risus in hendrerit gravida rutrum. Dictum sit amet justo donec enim diam vulputate ut pharetra. Auctor urna nunc id cursus metus aliquam. Volutpat est velit egestas dui id ornare arcu. Id semper risus in hendrerit. Sodales ut etiam sit amet. Et netus et malesuada fames. Nec dui nunc mattis enim ut. Quisque non tellus orci ac auctor augue mauris augue. Dignissim cras tincidunt lobortis feugiat. Mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare.</p>',
+                text: '<ul><li>Test 1</li><li>test 2</li></ul>',
                 layout: 1
               },
               actions: null
