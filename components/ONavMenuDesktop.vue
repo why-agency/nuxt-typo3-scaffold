@@ -1,18 +1,6 @@
 <template>
   <section
-    class="
-      fixed
-      z-50
-      hidden
-      w-full
-      h-full
-      min-h-full
-      overflow-y-scroll
-      bg-black
-      lg:grid
-      grid-cols-[minmax(379px,30%),minmax(345px,29%),1fr]
-      bg-opacity-30
-    "
+    class="fixed z-50 hidden w-full h-full min-h-full overflow-y-scroll bg-black lg:grid grid-cols-[minmax(379px,30%),minmax(345px,29%),1fr] bg-opacity-30"
     @click="handleClick"
   >
     <!-- START close button -->

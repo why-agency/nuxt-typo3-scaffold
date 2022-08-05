@@ -1,17 +1,6 @@
 <template>
   <div
-    class="
-      relative
-      row-start-1
-      flex flex-col
-      h-full
-      px-8
-      2xl:px-16
-      py-6
-      bg-white
-      o-nav-menu-desktop__column
-      focus-visible:outline-none
-    "
+    class="relative row-start-1 flex flex-col h-full px-8 2xl:px-16 py-6 bg-white o-nav-menu-desktop__column focus-visible:outline-none"
     tabindex="0"
     :class="$_zIndex"
   >

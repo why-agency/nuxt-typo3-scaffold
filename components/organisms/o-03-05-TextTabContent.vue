@@ -1,15 +1,6 @@
 <template>
   <div
-    class="
-      invisible
-      lg:visible lg:col-span-2 lg:max-w-[736px]
-      flex flex-col
-      pb-10
-      lg:pb-0
-      2xl:ml-10
-      3xl:ml-16
-      4xl:ml-40
-    "
+    class="invisible lg:visible lg:col-span-2 lg:max-w-[736px] flex flex-col pb-10 lg:pb-0 2xl:ml-10 3xl:ml-16 4xl:ml-40"
   >
     <div v-if="hasImage" class="lg:hidden mb-10">
       <BasePicture

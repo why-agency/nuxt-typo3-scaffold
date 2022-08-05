@@ -1,13 +1,7 @@
 <template>
   <section ref="target">
     <div
-      class="
-        grid
-        lg:grid-cols-[minmax(486px,714px),minmax(496px,900px)] lg:items-center
-        gap-y-10
-        lg:gap-x-20 lg:gap-y-0
-        2xl:gap-x-32
-      "
+      class="grid lg:grid-cols-[minmax(486px,714px),minmax(496px,900px)] lg:items-center gap-y-10 lg:gap-x-20 lg:gap-y-0 2xl:gap-x-32"
     >
       <!-- Image -->
       <div ref="imageCol" class="invisible pt-6 lg:py-24">

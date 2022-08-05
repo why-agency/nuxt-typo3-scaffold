@@ -3,22 +3,7 @@
     ref="card"
     :to="to"
     tag="li"
-    class="
-      invisible
-      glide__slide
-      flex flex-col
-      bg-no-repeat
-      m-4
-      lg:m-0
-      relative
-      min-h-[340px]
-      lg:min-h-[480px] lg:!w-[345px]
-      before:absolute
-      before:content-['']
-      before:inset-[-8px]
-      before:border-grey-100
-      cursor-pointer
-    "
+    class="invisible glide__slide flex flex-col bg-no-repeat m-4 lg:m-0 relative min-h-[340px] lg:min-h-[480px] lg:!w-[345px] before:absolute before:content-[''] before:inset-[-8px] before:border-grey-100 cursor-pointer"
     :class="[
       isSelected
         ? 'before:border bg-black transition duration-300'

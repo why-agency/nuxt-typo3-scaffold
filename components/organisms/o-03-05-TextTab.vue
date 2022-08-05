@@ -1,13 +1,7 @@
 <template>
   <section
     ref="target"
-    class="
-      grid
-      mx-6
-      lg:mx-40 lg:mt-16 lg:grid-cols-[344px,1fr,488px]
-      2xl:grid-cols-[344px,1fr,632px]
-      lg:gap-y-24
-    "
+    class="grid mx-6 lg:mx-40 lg:mt-16 lg:grid-cols-[344px,1fr,488px] 2xl:grid-cols-[344px,1fr,632px] lg:gap-y-24"
   >
     <div ref="tabHeader" class="lg:col-span-2 lg:self-end lg:mr-32">
       <BaseHeadline v-if="header.text" v-bind="header" class="mb-10" />

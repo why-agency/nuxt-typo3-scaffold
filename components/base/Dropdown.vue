@@ -1,15 +1,7 @@
 <template>
   <div
     ref="target"
-    class="
-      group
-      relative
-      px-0
-      overline3
-      items-center
-      hover:text-black
-      focus-visible:ring
-    "
+    class="group relative px-0 overline3 items-center hover:text-black focus-visible:ring"
     :class="$_color"
     @blur.capture="handleBlur"
   >
@@ -25,20 +17,7 @@
       :id="`${uid}-button`"
       ref="button"
       role="button"
-      class="
-        h-10
-        py-0
-        flex
-        items-center
-        w-full
-        cursor-pointer
-        group-hover:border-2
-        focus:outline-none
-        focus:ring
-        focus:ring-focus
-        focus:ring-2
-        focus:ring-offset-0
-      "
+      class="h-10 py-0 flex items-center w-full cursor-pointer group-hover:border-2 focus:outline-none focus:ring focus:ring-focus focus:ring-2 focus:ring-offset-0"
       aria-haspopup="listbox"
       :aria-labelledby="`${uid}-label ${uid}-button`"
       :aria-expanded="optionsVisible"
@@ -50,16 +29,7 @@
     >
       <div
         v-if="hasIconPrefix"
-        class="
-          flex
-          absolute
-          items-center
-          h-3
-          w-3
-          text-gray-400
-          left-4
-          group-hover:text-black
-        "
+        class="flex absolute items-center h-3 w-3 text-gray-400 left-4 group-hover:text-black"
       >
         <slot name="iconPrefix" />
       </div>
@@ -68,36 +38,14 @@
         :value="selected.label || selected || placeholder"
       >
         <p
-          class="
-            inset-y-0
-            items-center
-            text-gray-400
-            focus:outline-none
-            focus:ring
-            focus:ring-focus
-            focus:ring-2
-            focus:ring-offset-0
-            group-hover:text-black
-            text-form-value
-            px-10
-          "
+          class="inset-y-0 items-center text-gray-400 focus:outline-none focus:ring focus:ring-focus focus:ring-2 focus:ring-offset-0 group-hover:text-black text-form-value px-10"
         >
           {{ selected.label || selected || placeholder }}
         </p>
       </slot>
       <div>
         <div
-          class="
-            absolute
-            flex
-            inset-y-0
-            right-0
-            w-10
-            items-center
-            padding-left:
-            pl-8
-            group-hover:text-black
-          "
+          class="absolute flex inset-y-0 right-0 w-10 items-center padding-left: pl-8 group-hover:text-black"
         >
           <IconChevronUpFat
             v-if="optionsVisible"
@@ -109,16 +57,7 @@
     </div>
     <ul
       ref="optionsList"
-      class="
-        absolute
-        z-10
-        w-full
-        px-0
-        overflow-y-scroll overflow-x-scroll
-        text-lg
-        max-h-40
-        focus:outline-none
-      "
+      class="absolute z-10 w-full px-0 overflow-y-scroll overflow-x-scroll text-lg max-h-40 focus:outline-none"
       :class="[{ hidden: !optionsVisible }, $_color]"
       :style="{ top: openUp ? -height + 'px' : false }"
       role="listbox"
@@ -135,15 +74,7 @@
     >
       <li
         v-if="placeholder && selected"
-        class="
-          items-center
-          h-8
-          pl-3
-          text-gray-500
-          hover:text-gray-300
-          flex
-          left-3
-        "
+        class="items-center h-8 pl-3 text-gray-500 hover:text-gray-300 flex left-3"
         @click="handleSelect('')"
       >
         {{ placeholder }}
@@ -154,15 +85,7 @@
         :key="option.label || option"
         role="option"
         :aria-selected="activeOptionIndex === index"
-        class="
-          text-gray-500
-          bg-gray-100
-          cursor-pointer
-          hover:bg-white hover:text-black
-          active:bg-white
-          text-black
-          w-full
-        "
+        class="text-gray-500 bg-gray-100 cursor-pointer hover:bg-white hover:text-black active:bg-white text-black w-full"
         :class="{
           '!bg-white': index === focused
         }"

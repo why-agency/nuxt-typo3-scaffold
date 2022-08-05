@@ -1,20 +1,7 @@
 <template>
   <div
     ref="navWrapper"
-    class="
-      lg:hidden
-      fixed
-      top-0
-      z-50
-      w-full
-      px-6
-      h-20
-      bg-white
-      shadow-light
-      flex
-      justify-between
-      items-center
-    "
+    class="lg:hidden fixed top-0 z-50 w-full px-6 h-20 bg-white shadow-light flex justify-between items-center"
   >
     <BaseLogo @click.native="closeMenu" />
     <BaseButtonIcon

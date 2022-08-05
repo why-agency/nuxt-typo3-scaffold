@@ -19,17 +19,7 @@
         @focus="onFocus"
       />
       <span
-        class="
-          relative
-          flex
-          items-center
-          justify-center
-          w-4
-          h-4
-          border border-gray-200
-          group-hover:bg-primary-hover/25
-          rounded
-        "
+        class="relative flex items-center justify-center w-4 h-4 border border-gray-200 group-hover:bg-primary-hover/25 rounded"
         :class="$_checkbox"
       >
         <IconChevronUpFat
@@ -39,15 +29,7 @@
         />
       </span>
       <label
-        class="
-          flex-1
-          ml-4
-          text-primary
-          cursor-pointer
-          select-none
-          group-hover:text-primary
-          text-notification
-        "
+        class="flex-1 ml-4 text-primary cursor-pointer select-none group-hover:text-primary text-notification"
         :class="{ 'text-primary': isFocused }"
         :for="uid"
       >

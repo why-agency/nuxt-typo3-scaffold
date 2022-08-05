@@ -3,16 +3,7 @@
     <!-- START background image -->
     <div
       v-if="image"
-      class="
-        absolute
-        top-0
-        left-0
-        w-full
-        h-3/4
-        min-h-[256px]
-        md:min-h-[400px]
-        lg:h-[864px]
-      "
+      class="absolute top-0 left-0 w-full h-3/4 min-h-[256px] md:min-h-[400px] lg:h-[864px]"
       :class="{ dark: theme === 'dark' }"
     >
       <BasePicture :images="image" size="h-full w-full" />
@@ -44,14 +35,7 @@
         <BaseSubline
           v-if="subline"
           v-bind="subline"
-          class="
-            mt-6
-            lg:mt-12
-            line-clamp-3
-            md:max-w-3xl
-            2xl:max-w-5xl
-            dark:text-white
-          "
+          class="mt-6 lg:mt-12 line-clamp-3 md:max-w-3xl 2xl:max-w-5xl dark:text-white"
         >
           <BaseHtmlParser :content="subline.text" />
         </BaseSubline>

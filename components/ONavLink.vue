@@ -6,23 +6,7 @@
     :rel="isAnchor ? 'noopener noreferrer' : false"
     :target="isAnchor ? '_blank' : false"
     role="menuitem"
-    class="
-      font-secondary
-      hover:text-primary-hover
-      border-b border-gray-200
-      lg:border-transparent lg:border-b-2
-      flex
-      justify-between
-      items-center
-      cursor-pointer
-      disabled:opacity-30 disabled:pointer-events-none
-      focus:outline-none
-      focus-visible:border-focus
-      active:ring-0
-      transition
-      duration-300
-      ease-hover
-    "
+    class="font-secondary hover:text-primary-hover border-b border-gray-200 lg:border-transparent lg:border-b-2 flex justify-between items-center cursor-pointer disabled:opacity-30 disabled:pointer-events-none focus:outline-none focus-visible:border-focus active:ring-0 transition duration-300 ease-hover"
     :class="$_linkStyle"
     :event="isDirectLink ? 'click' : ''"
     @click.native="handleClick"

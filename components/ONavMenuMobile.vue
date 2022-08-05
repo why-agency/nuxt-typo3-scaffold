@@ -1,19 +1,6 @@
 <template>
   <div
-    class="
-      lg:hidden
-      fixed
-      top-20
-      pt-2
-      z-50
-      w-full
-      h-full
-      bg-white
-      px-6
-      pb-20
-      overflow-y-scroll
-      flex flex-col
-    "
+    class="lg:hidden fixed top-20 pt-2 z-50 w-full h-full bg-white px-6 pb-20 overflow-y-scroll flex flex-col"
   >
     <!--START BACK BUTTON & DIRECT LINK TO CURRENT CATEGORY-->
     <div ref="backButton">
@@ -26,11 +13,7 @@
             <IconChevronLeftFat />
           </BaseButtonIcon>
           <div
-            class="
-              text-nav-main-expanded-mobile
-              uppercase
-              font-secondary font-bold
-            "
+            class="text-nav-main-expanded-mobile uppercase font-secondary font-bold"
           >
             {{ currentActiveCategory.title }}
           </div>

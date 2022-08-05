@@ -6,18 +6,7 @@
   >
     <div
       ref="navbar"
-      class="
-        flex
-        items-center
-        justify-between
-        space-x-14
-        bg-white
-        px-14
-        py-7
-        shadow-light
-        relative
-        z-10
-      "
+      class="flex items-center justify-between space-x-14 bg-white px-14 py-7 shadow-light relative z-10"
     >
       <!--START NAV LEFT-->
       <BaseLogo ref="logo" @click.native="closeMenu" />
