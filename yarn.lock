@@ -5568,10 +5568,10 @@ gsap@./gsap-bonus.tgz:
   version "3.9.1"
   resolved "./gsap-bonus.tgz#6abfbb71a6843bbd7f09cd7935a8d3074b039f32"
 
-gsap@^3.8.0:
-  version "3.10.4"
-  resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.10.4.tgz#db89a6b8f6d5cb76e274eae822cbc1aa4d31e88f"
-  integrity sha512-6QatdkKxXCMfvCW4rM++0RqyLQAzFX5nwl3yHS0XPgkZBkiSEY3VZVbMltrdtsbER/xZonLtyHt684wRp4erlQ==
+gsap@^3.11.4:
+  version "3.11.5"
+  resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.11.5.tgz#97ef65091f43868be387803f9db277e8cd5bd041"
+  integrity sha512-Q89nKCLgoX5xUjznh9LcaIUkz54k1voNucT1Rpf9SJNFIQznBwFqt5qUUQbeVInFyN/n18OUJkpeI6CNEDt74w==
 
 gzip-size@^6.0.0:
   version "6.0.0"
@@ -7669,12 +7669,12 @@ num2fraction@^1.2.2:
   resolved "https://registry.yarnpkg.com/num2fraction/-/num2fraction-1.2.2.tgz#6f682b6a027a4e9ddfa4564cd2589d1d4e669ede"
   integrity sha1-b2gragJ6Tp3fpFZM0lidHU5mnt4=
 
-nuxt-gsap-module@1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/nuxt-gsap-module/-/nuxt-gsap-module-1.5.0.tgz#a4a27e5e5c7db11e84f829d85a575b08e67f05c0"
-  integrity sha512-/rtD6XEJ31fSEGEuL7x9Yajznp8WUHJ4GmbxJ+66abj0B8ZB+xa0whmI6N/Ih8ene09WBojHiWuBzXdMPw8FJQ==
+nuxt-gsap-module@1.7.3:
+  version "1.7.3"
+  resolved "https://registry.yarnpkg.com/nuxt-gsap-module/-/nuxt-gsap-module-1.7.3.tgz#f4c68c0ca245f21055f130fcef886532f8584e2f"
+  integrity sha512-zWYY+0GQJaD65DGH1IzHG2+Ntehr/uQGw5nOrmLpu1NSnmlW4envPtq5GmqYb3A+OD3ZshvD0igUerifeyUDQg==
   dependencies:
-    gsap "^3.8.0"
+    gsap "^3.11.4"
 
 nuxt-i18n@6.28.1:
   version "6.28.1"
